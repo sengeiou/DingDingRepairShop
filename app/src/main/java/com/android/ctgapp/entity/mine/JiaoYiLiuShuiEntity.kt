@@ -1,0 +1,76 @@
+package com.android.ctgapp.entity.mine
+
+class JiaoYiLiuShuiEntity {
+    /**
+     * status : 0
+     * msg : null
+     * data : {"records":[{"id":4805,"actionNum":"DD20210814140718623GPXL012","actionType":2,"balanceType":1,"amount":65,"payWay":1,"recordTime":"2021-08-14 14:07:18","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4751,"actionNum":"DD20210813203600873GFST031","actionType":2,"balanceType":1,"amount":0.02,"payWay":1,"recordTime":"2021-08-13 20:36:01","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4749,"actionNum":"DD20210813203049345CWOM029","actionType":2,"balanceType":1,"amount":70,"payWay":1,"recordTime":"2021-08-13 20:30:49","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4745,"actionNum":"DD20210813202058181PRN2023","actionType":2,"balanceType":1,"amount":70,"payWay":1,"recordTime":"2021-08-13 20:20:58","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4737,"actionNum":"DD20210813191847626MSUW017","actionType":2,"balanceType":1,"amount":70,"payWay":1,"recordTime":"2021-08-13 19:18:47","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4727,"actionNum":"DD20210813173939835GQQS001","actionType":2,"balanceType":1,"amount":70,"payWay":1,"recordTime":"2021-08-13 17:39:40","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4695,"actionNum":"TH20210813133530566I2OH054","actionType":3,"balanceType":2,"amount":840,"payWay":6,"recordTime":"2021-08-13 13:36:26","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售退货","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4681,"actionNum":"DD20210813124638573MSIC031","actionType":2,"balanceType":1,"amount":840,"payWay":6,"recordTime":"2021-08-13 12:46:38","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4673,"actionNum":"DD202108131114259732AQU022","actionType":2,"balanceType":1,"amount":70,"payWay":1,"recordTime":"2021-08-13 11:14:26","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4657,"actionNum":"DD20210812225409158PQ8C016","actionType":2,"balanceType":1,"amount":405,"payWay":6,"recordTime":"2021-08-12 22:54:09","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4573,"actionNum":"DD202108112219433263KAY111","actionType":2,"balanceType":1,"amount":360,"payWay":6,"recordTime":"2021-08-11 22:19:43","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4269,"actionNum":"DD20210805175422819WL2A025","actionType":2,"balanceType":1,"amount":40,"payWay":1,"recordTime":"2021-08-05 17:54:22","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4211,"actionNum":"DD20210805103816143MHZV061","actionType":2,"balanceType":1,"amount":40,"payWay":6,"recordTime":"2021-08-05 10:38:16","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4209,"actionNum":"DD20210805103652338Z3KT059","actionType":2,"balanceType":1,"amount":350,"payWay":1,"recordTime":"2021-08-05 10:36:52","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":3763,"actionNum":"DD20210701170316741WXOP028","actionType":2,"balanceType":1,"amount":0.01,"payWay":1,"recordTime":"2021-07-01 17:03:16","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":3761,"actionNum":"DD20210701170244523W12L026","actionType":2,"balanceType":1,"amount":0.01,"payWay":1,"recordTime":"2021-07-01 17:02:44","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":3741,"actionNum":"TH20210629094415802J6PE232","actionType":3,"balanceType":2,"amount":0.01,"payWay":1,"recordTime":"2021-06-29 14:38:18","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售退货","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":3709,"actionNum":"DD202106290921392945GYF227","actionType":2,"balanceType":1,"amount":0.01,"payWay":1,"recordTime":"2021-06-29 09:21:39","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":3711,"actionNum":"DD202106290921398131JJS229","actionType":2,"balanceType":1,"amount":0.01,"payWay":1,"recordTime":"2021-06-29 09:21:39","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":3707,"actionNum":"DD20210629092120400MTD1225","actionType":2,"balanceType":1,"amount":0.01,"payWay":1,"recordTime":"2021-06-29 09:21:20","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0}],"total":47,"size":20,"current":1,"orders":[],"optimizeCountSql":true,"hitCount":false,"countId":null,"maxLimit":null,"searchCount":true,"pages":3}
+     */
+    var status: Int? = null
+    var msg: Any? = null
+    var data: DataBean? = null
+
+    class DataBean{
+        /**
+         * records : [{"id":4805,"actionNum":"DD20210814140718623GPXL012","actionType":2,"balanceType":1,"amount":65,"payWay":1,"recordTime":"2021-08-14 14:07:18","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4751,"actionNum":"DD20210813203600873GFST031","actionType":2,"balanceType":1,"amount":0.02,"payWay":1,"recordTime":"2021-08-13 20:36:01","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4749,"actionNum":"DD20210813203049345CWOM029","actionType":2,"balanceType":1,"amount":70,"payWay":1,"recordTime":"2021-08-13 20:30:49","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4745,"actionNum":"DD20210813202058181PRN2023","actionType":2,"balanceType":1,"amount":70,"payWay":1,"recordTime":"2021-08-13 20:20:58","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4737,"actionNum":"DD20210813191847626MSUW017","actionType":2,"balanceType":1,"amount":70,"payWay":1,"recordTime":"2021-08-13 19:18:47","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4727,"actionNum":"DD20210813173939835GQQS001","actionType":2,"balanceType":1,"amount":70,"payWay":1,"recordTime":"2021-08-13 17:39:40","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4695,"actionNum":"TH20210813133530566I2OH054","actionType":3,"balanceType":2,"amount":840,"payWay":6,"recordTime":"2021-08-13 13:36:26","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售退货","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4681,"actionNum":"DD20210813124638573MSIC031","actionType":2,"balanceType":1,"amount":840,"payWay":6,"recordTime":"2021-08-13 12:46:38","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4673,"actionNum":"DD202108131114259732AQU022","actionType":2,"balanceType":1,"amount":70,"payWay":1,"recordTime":"2021-08-13 11:14:26","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4657,"actionNum":"DD20210812225409158PQ8C016","actionType":2,"balanceType":1,"amount":405,"payWay":6,"recordTime":"2021-08-12 22:54:09","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4573,"actionNum":"DD202108112219433263KAY111","actionType":2,"balanceType":1,"amount":360,"payWay":6,"recordTime":"2021-08-11 22:19:43","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4269,"actionNum":"DD20210805175422819WL2A025","actionType":2,"balanceType":1,"amount":40,"payWay":1,"recordTime":"2021-08-05 17:54:22","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4211,"actionNum":"DD20210805103816143MHZV061","actionType":2,"balanceType":1,"amount":40,"payWay":6,"recordTime":"2021-08-05 10:38:16","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":4209,"actionNum":"DD20210805103652338Z3KT059","actionType":2,"balanceType":1,"amount":350,"payWay":1,"recordTime":"2021-08-05 10:36:52","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":3763,"actionNum":"DD20210701170316741WXOP028","actionType":2,"balanceType":1,"amount":0.01,"payWay":1,"recordTime":"2021-07-01 17:03:16","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":3761,"actionNum":"DD20210701170244523W12L026","actionType":2,"balanceType":1,"amount":0.01,"payWay":1,"recordTime":"2021-07-01 17:02:44","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":3741,"actionNum":"TH20210629094415802J6PE232","actionType":3,"balanceType":2,"amount":0.01,"payWay":1,"recordTime":"2021-06-29 14:38:18","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售退货","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":3709,"actionNum":"DD202106290921392945GYF227","actionType":2,"balanceType":1,"amount":0.01,"payWay":1,"recordTime":"2021-06-29 09:21:39","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":3711,"actionNum":"DD202106290921398131JJS229","actionType":2,"balanceType":1,"amount":0.01,"payWay":1,"recordTime":"2021-06-29 09:21:39","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0},{"id":3707,"actionNum":"DD20210629092120400MTD1225","actionType":2,"balanceType":1,"amount":0.01,"payWay":1,"recordTime":"2021-06-29 09:21:20","companyId":1000000344,"objCompanyId":1000000378,"recordDescription":"销售","deleteTime":null,"isDeleted":0,"orgName":"W企业","firstLevelMoney":0,"secondLevelMoney":0,"finalMoney":0}]
+         * total : 47
+         * size : 20
+         * current : 1
+         * orders : []
+         * optimizeCountSql : true
+         * hitCount : false
+         * countId : null
+         * maxLimit : null
+         * searchCount : true
+         * pages : 3
+         */
+        var total: Int? = null
+        var size: Int? = null
+        var current: Int? = null
+        var isOptimizeCountSql: Boolean? = null
+        var isHitCount: Boolean? = null
+        var countId: Any? = null
+        var maxLimit: Any? = null
+        var isSearchCount: Boolean? = null
+        var pages: Int? = null
+        var records: List<RecordsBean>? = null
+        var orders: List<*>? = null
+
+        class RecordsBean  {
+            /**
+             * id : 4805
+             * actionNum : DD20210814140718623GPXL012
+             * actionType : 2
+             * balanceType : 1
+             * amount : 65.0
+             * payWay : 1
+             * recordTime : 2021-08-14 14:07:18
+             * companyId : 1000000344
+             * objCompanyId : 1000000378
+             * recordDescription : 销售
+             * deleteTime : null
+             * isDeleted : 0
+             * orgName : W企业
+             * firstLevelMoney : 0
+             * secondLevelMoney : 0
+             * finalMoney : 0
+             */
+            var id: Int? = null
+            var actionNum: String? = null
+            var actionType: Int? = null
+            var balanceType: Int? = null
+            var amount: Double? = null
+            var payWay: Int? = null
+            var recordTime: String? = null
+            var companyId: Int? = null
+            var objCompanyId: Int? = null
+            var recordDescription: String? = null
+            var deleteTime: Any? = null
+            var isDeleted: Int? = null
+            var orgName: String? = null
+            var firstLevelMoney: Int? = null
+            var secondLevelMoney: Int? = null
+            var finalMoney: Int? = null
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_color">#000000</color>
+    <color name="button_pressed_bg">#AEAEAE</color>
+    <color name="green_color">#00CC00</color>
+    <color name="list_view_bg">#DAD9DE</color>
+    <color name="theme_color">#59D4D1</color>
+    <color name="white_color">#FFFFFF</color>
+    <dimen name="camera_rect_line_length">16dp</dimen>
+    <dimen name="camera_rect_lint_width">2dp</dimen>
+    <dimen name="camera_top_margin">40dp</dimen>
+    <dimen name="img_lint_width">1.5dp</dimen>
+    <dimen name="num">25dp</dimen>
+    <dimen name="text_size">20sp</dimen>
+    <dimen name="textsizi">20dp</dimen>
+    <item name="statusbarutil_fake_status_bar_view" type="id"/>
+    <item name="statusbarutil_translucent_view" type="id"/>
+</resources>

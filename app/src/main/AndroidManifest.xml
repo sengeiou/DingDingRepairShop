@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.ctgapp" >
+    <!-- package="$applicationId"> -->
+    <!-- 解锁屏幕需要的权限 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" /> <!-- 申请电源锁需要的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读取通讯录 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <queries>
+        <package android:name="com.tencent.mm" />
+    </queries>
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:icon="@drawable/logo_app"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="n" >
+
+        <activity
+            android:name=".activity.home.shop.SearchGoodsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.mine.money.RechargeMoneyHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.mine.money.MoneyPackageRechargeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.mine.money.MyMoneyPackageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.mine.team.InviteUserToTeamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.message.chart.CurrentGroupChartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.mine.company.ClientManagerSetActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.deal.QueryRecordV2Activity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.mine.ShouXinCompanyctivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.home.CarConfigDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".WXEntryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.mine.JumpToGzhDialogActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/DialogTheme" />
+        <activity
+            android:name=".activity.mine.alliance.AllianceChildCompanyActivity"
+            android:exported="true" />
+        <activity android:name=".activity.home.enquiry.VinSearchHistoryActivity" />
+        <activity android:name=".activity.deal.enquire.EnquireWishDetailActivity" />
+        <activity android:name=".activity.deal.enquire.EnquireWishListActivity" />
+        <activity
+            android:name=".activity.other.SystemNoticeDialogActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/DialogTheme" />
+        <activity
+            android:name=".activity.message.SystemNoticeActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".activity.deal.EnquireOrderConfirmActivity" />
+        <activity android:name=".activity.deal.EnquireWaitDetailActivity" />
+        <activity android:name=".activity.other.GuidePageActivity" />
+        <activity android:name=".activity.deal.CommonPaySuccessActivity" />
+        <activity android:name=".activity.mine.whitebar.PrepaymentChildActivity" />
+        <activity android:name=".activity.mine.whitebar.PrepaymentActivity" />
+        <activity android:name=".activity.home.shop.WhiteBarReturnActivity" />
+        <activity
+            android:name=".activity.mine.whitebar.CreditExtensionActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.whitebar.WhiteBarDetailChildActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.whitebar.WhiteBarDealDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.whitebar.WhiteBarDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.whitebar.CheckFlowActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.whitebar.WhiteBarV2Activity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.ctgoe.app.wl.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.ctgoe.app.dingding.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.ctgoe.app.dingding.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.ctgoe.app.lanjing.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.enquiry.EpcPartDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.enquiry.EpcDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.enquiry.EPCActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.deal.QueryRecordDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.enquiry.BatchAddPartSelectMoreActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.deal.QueryRecordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.enquiry.AddPartActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.enquiry.BatchAddPartActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.enquiry.EnquiryCommonSelectActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.enquiry.EnquiryActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.mine.alliance.AllianceDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.setting.AboutAppActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.login.UserAgreementActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.client.AuthInviteActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.company.CompanyAttestationActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.company.CompanyIntroActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.message.chart.card.CardShareRecentChartActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.message.chart.card.DingDingContactShareActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.message.chart.PersonInfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.company.CompanyInfoSettingActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.friend.FriendCompanyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.team.ManagementTeamActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.team.ManagementTeamMenuActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.message.chart.ChartOrderActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.message.chart.TakePhotoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.message.chart.CurrentChartActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.mine.VisitorActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.team.ApplyNotifyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.ShareAppActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.whitebar.WhiteBarActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.ALLCouponsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.alliance.AllianceCanJoinActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.alliance.JoinAllianceActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.balance.BalanceTopUpActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.mine.balance.BalanceSelectActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.alliance.CreateAllianceActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.alliance.MyAllianceActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.balance.CompanyBalanceActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.login.CreateOrJoinCompanyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.login.RegisterActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.company.JoinCompanyByCodeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.setting.PersonalAuthenticationActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.other.SplashPageActivity"
+            android:theme="@style/AppTheme.StartingWindowTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.deal.ReturnGoodsDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".adapter.chart.ChartOrderDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.shop.CouponActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.deal.AfterSaleActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.address.AddressListActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.deal.LaunchAfterSaleActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.shop.PayResultActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.deal.OrderDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.shop.OrderConfirmSingleActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.address.AddressEditActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.shop.CheckoutActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.shop.TrolleyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.shop.VulnerablePartShopActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".activity.home.VinSearchActivity" />
+        <activity
+            android:name=".activity.home.shop.OrderConfirmActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.home.shop.GoodsDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.shop.PartShopActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.company.CompanyContactSelectActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.client.AddClientActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.client.ClientManagementActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.mine.team.DepartmentSelectActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.team.SelectPositionActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.team.ApplyNotificationActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.friend.PhoneContactActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.friend.AddSelectGroupActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.friend.AddBusinessFriendActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.friend.CustomGroupSettingActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.money.RechargeCommitActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.friend.BusinessFriendActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.team.AddOrEditMemberActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.team.MyTeamActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.PersonInfoChangeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.setting.ChangePasswordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.setting.SettingActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.mine.company.CompanyDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.login.ForgetPasswordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.login.LoginActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.company.JoinCompanyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.company.CreateCompanyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.company.SwitchCompanyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask" />
+        <!--
+         android:process=":remote"
+          android:process=":pushcore"
+        -->
+        <service
+            android:name=".service.AppService"
+            android:enabled="true"
+            android:exported="false" /> <!-- android:authorities="com.android.ctgapp.fileProvider" -->
+        <service
+            android:name=".service.JpushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore" >
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".receiver.JPushReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="$applicationId" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".boradcast.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name=".util.FileProvider"
+            android:authorities="${FILE_PROVIDER}"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="name,authorities,exported,grantUriPermissions" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                tools:replace="name,resource" />
+        </provider> <!-- bugly -->
+        <!-- 配置APP ID -->
+<!--        <meta-data-->
+<!--            android:name="BUGLY_APPID"-->
+<!--            android:value="f7810dd409" /> &lt;!&ndash; 配置APP渠道号 &ndash;&gt;-->
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="61d0cf3092" /> <!-- 配置APP渠道号 -->
+        <meta-data
+            android:name="BUGLY_APP_CHANNEL"
+            android:value="${FILE_PROVIDER}" /> <!-- 配置Bugly调试模式（true或者false） -->
+        <meta-data
+            android:name="BUGLY_ENABLE_DEBUG"
+            android:value="true" /> <!-- 配置APP版本号 -->
+        <meta-data
+            android:name="BUGLY_APP_VERSION"
+            android:value="1.0.0" />
+    </application>
+
+</manifest>

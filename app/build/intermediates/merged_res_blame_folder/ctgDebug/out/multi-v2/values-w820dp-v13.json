@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\YL\\AndroidStudioProjects\\DingDingRepairShop\\app\\build\\intermediates\\incremental\\mergeCtgDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\YL\\.gradle\\caches\\transforms-2\\files-2.1\\217c2a28d51e1360bad70945c4ac2214\\jetified-ImagePicker-1.4.4\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
+                    }
+                }
+            ]
+        }
+    ]
+}

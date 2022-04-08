@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="公司信息"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="10dp"
+            android:id="@+id/mDeleteIV"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/edit_delete" />
+    </RelativeLayout>
+
+    <View style="@style/GrayLine" />
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公司电话" />
+
+        <EditText
+            android:maxLength="11"
+            android:id="@+id/mPhoneET"
+            android:inputType="phone"
+            android:layout_marginStart="20dp"
+            android:textSize="14sp"
+            android:hint="请输入公司电话"
+            android:maxLines="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null" />
+    </LinearLayout>
+    <View style="@style/GrayLine" />
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公司邮箱" />
+
+        <EditText
+            android:maxLength="30"
+            android:id="@+id/mEmailET"
+            android:layout_marginStart="20dp"
+            android:textSize="14sp"
+            android:hint="请输入公司邮箱"
+            android:maxLines="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null" />
+    </LinearLayout>
+    <View style="@style/GrayLine" />
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公司网址" />
+
+        <EditText
+            android:maxLength="30"
+            android:id="@+id/mUrlET"
+            android:layout_marginStart="20dp"
+            android:textSize="14sp"
+            android:hint="请输入公司网址"
+            android:maxLines="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null" />
+    </LinearLayout>
+    <View style="@style/GrayLine" />
+    <LinearLayout
+        android:id="@+id/mSizeLL"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公司规模" />
+
+        <TextView
+            android:id="@+id/mSizeTV"
+            android:layout_marginStart="20dp"
+            android:textSize="14sp"
+            android:text="请选择公司规模"
+            android:maxLines="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null" />
+        <ImageView
+            android:id="@+id/mPupPoint"
+            android:src="@drawable/icon_arrow_right_black"
+            android:layout_width="12dp"
+            android:layout_height="12dp"/>
+    </LinearLayout>
+    <View style="@style/GrayLine" />
+    <LinearLayout
+        android:id="@+id/mAddressLL"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公司地址" />
+
+        <TextView
+            android:id="@+id/mAddressTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="请选择地址"
+            android:textSize="14sp" />
+
+        <ImageView
+
+            android:src="@drawable/icon_arrow_right_black"
+            android:layout_width="12dp"
+            android:layout_height="12dp"/>
+    </LinearLayout>
+
+    <View style="@style/GrayLine" />
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详细地址" />
+
+        <EditText
+            android:maxLength="50"
+            android:singleLine="true"
+            android:id="@+id/mAddressET"
+            android:layout_marginStart="20dp"
+            android:textSize="14sp"
+            android:hint="请输入公司地址"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null" />
+    </LinearLayout>
+    <View
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp" />
+
+    <Button
+        android:id="@+id/mSaveBTN"
+        android:layout_margin="20dp"
+        android:text="保存"
+        style="@style/CommonButton"
+        />
+
+</LinearLayout>

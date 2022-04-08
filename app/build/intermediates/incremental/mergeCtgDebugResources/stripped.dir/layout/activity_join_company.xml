@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page"
+    tools:context=".activity.company.JoinCompanyActivity">
+
+    <com.android.ctgapp.widget.CustomTitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mTitle="加入企业" />
+
+    <TextView
+        android:id="@+id/mInvitationCodeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:gravity="bottom"
+        android:paddingHorizontal="20dp"
+        android:paddingBottom="10dp"
+        android:text="邀请码"
+        android:textColor="#8D8D8D" />
+
+    <LinearLayout
+        android:id="@+id/mSearchLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mTitleBar"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingVertical="10dp">
+
+        <com.android.ctgapp.widget.EditTextWithDeleteBtn
+            android:id="@+id/mSearchET"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/bg_edit_text_common"
+            android:gravity="center_vertical"
+            android:hint="请输入关键字"
+            android:imeOptions="actionSearch"
+            android:paddingStart="20dp"
+            android:paddingEnd="3dp"
+            android:singleLine="true"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mCompanyCountTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mSearchLL"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:text="共1234家企业" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mCompanyCountTV">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <com.android.ctgapp.common.CommonRecyclerView
+            android:id="@+id/mCompanyRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".activity.deal.CommonPaySuccessActivity">
+
+    <com.android.ctgapp.widget.CustomTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mTitle="还款" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/icon_success_green" />
+
+    <TextView
+        android:id="@+id/mMoneyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:paddingBottom="20dp"
+        android:text="$1234"
+        android:textColor="@color/black_text"
+        android:textSize="39sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+        android:text="支付成功"
+        android:textColor="@color/green"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/mFinishBTN"
+        style="@style/CommonButton"
+        android:layout_width="150dp"
+        android:layout_marginTop="30dp"
+        android:text="完成" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

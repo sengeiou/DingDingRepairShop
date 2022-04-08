@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/white"
+    android:id="@+id/mParentRL"
+    android:paddingVertical="12dp">
+
+    <CheckBox
+        android:id="@+id/mCheckBox"
+        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:scaleX="0.7"
+        android:scaleY="0.7" />
+
+    <ImageView
+        android:id="@+id/mPartIV"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="0dp"
+        android:layout_toEndOf="@id/mCheckBox"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/df" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/mPartIV"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:id="@+id/mTopTextTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车前装饰格栅 黑色 右侧"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mTopTextTV"
+            android:layout_marginTop="15dp"
+            android:text="编码:"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/mNumberTV"
+            android:layout_marginStart="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mTopTextTV"
+            android:layout_marginTop="15dp"
+            android:text="121331131212"
+            android:textColor="@color/colorAccent"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

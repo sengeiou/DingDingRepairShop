@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.android.ctgapp.widget.CustomTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mTitle="关注公众号" />
+
+
+
+
+    <!--单选框-->
+    <com.xuexiang.xui.widget.button.SmoothCheckBox
+        android:id="@+id/mCheckBox"
+        android:focusable="false"
+        android:visibility="invisible"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:scb_color_checked="@color/green" />
+
+    <ImageView
+        android:id="@+id/mImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp" />
+
+    <TextView
+        android:id="@+id/mTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mCheckBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="正在关注中"
+        android:textSize="18sp" />
+
+</RelativeLayout>

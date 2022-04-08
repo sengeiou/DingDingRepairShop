@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mItemRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="10dp">
+        <RelativeLayout
+            android:id="@+id/mHeaderRL"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mHeaderIV"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/defaulthead" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/mOnlineTV"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:background="@drawable/bg_solid_acc_light_100dp"-->
+<!--                android:paddingHorizontal="5dp"-->
+<!--                android:text="在线"-->
+<!--                android:textColor="@color/colorAccent"-->
+<!--                android:textSize="8sp" />-->
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="34dp"
+            android:layout_marginStart="-24dp"
+            android:layout_toEndOf="@id/mHeaderRL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/bg_solid_white_circel"
+                android:gravity="center"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:layout_centerInParent="true"
+                android:id="@+id/mOnLineIV"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_btn_red_circel"
+                android:gravity="center"
+                android:textColor="@color/white"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/mUserNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/mHeaderRL"
+            android:text="@string/app_name"
+            android:textColor="@color/black_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/mCompanyNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/mUserNameTV"
+            android:layout_toEndOf="@id/mHeaderRL"
+            android:text="@string/app_name"
+            android:textColor="#777777"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/mCheckBox"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:scaleX="0.8"
+            android:scaleY="0.8" />
+    </RelativeLayout>
+
+    <View style="@style/GrayLine" />
+</LinearLayout>

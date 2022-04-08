@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/mMenuName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="车系选择"
+            android:textColor="@color/black_text"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/mCloseIV"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"
+            android:src="@drawable/edit_delete" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="可多选"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp" />
+
+    <View
+        style="@style/GrayLine"
+        android:layout_marginVertical="10dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mCarSeriesRV"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+
+    <Button
+        android:id="@+id/mConfirmBTN"
+        android:text="@string/confrim"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginHorizontal="10dp"
+        style="@style/CommonButton"/>
+
+</LinearLayout>

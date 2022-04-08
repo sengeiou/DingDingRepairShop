@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mParentLL"
+    android:layout_marginTop="1dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:id="@+id/mIndexTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/bg_btn_common"
+        android:paddingHorizontal="4dp"
+        android:text="01"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/mTitleLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="节气门"
+                android:textColor="@color/black_text"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/mImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingHorizontal="10dp"
+                android:src="@drawable/icon_epc_location" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/mNameDetailTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="节气门阀体"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mOENumberTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mTitleLL"
+            android:paddingVertical="6dp"
+            android:text="OE号:"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/m4sAndCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mTitleLL"
+            android:text="4s价 数量"
+            android:textSize="12sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/mCheckLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <CheckBox
+            android:id="@+id/mCheckBox"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/mCheckTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已选择"
+            android:textSize="10sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

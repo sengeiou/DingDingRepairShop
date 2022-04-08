@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="10dp"
+        android:text="退货原因"
+        android:textSize="17sp" />
+
+    <RadioGroup
+        android:id="@+id/mGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+        <!--此处left不可改为end 或start否则部分华为手机布局会出错-->
+        <RadioButton
+            android:id="@+id/mRB1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:layoutDirection="rtl"
+            android:text="发错货" />
+
+        <View style="@style/GrayLine" />
+
+        <RadioButton
+            android:gravity="left|center_vertical"
+            android:id="@+id/mRB2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:text="质量问题" />
+
+        <View style="@style/GrayLine" />
+
+        <RadioButton
+            android:gravity="left|center_vertical"
+            android:id="@+id/mRB3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:text="下错订单" />
+
+        <View style="@style/GrayLine" />
+
+        <RadioButton
+            android:gravity="left|center_vertical"
+            android:id="@+id/mRB4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:text="其他" />
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/mConfirmBTN"
+        style="@style/CommonButton"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="30dp"
+        android:text="确定" />
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+R_DEF: Internal format may change without notice
+local
+drawable bg_recording_shape
+drawable bg_red_shape
+drawable bg_white_shape
+drawable icon_record_cancel
+drawable icon_record_label
+drawable icon_record_short
+drawable icon_recording_1
+drawable icon_recording_2
+drawable icon_recording_3
+drawable icon_recording_4
+drawable icon_recording_5
+drawable icon_recording_6
+drawable icon_recording_7
+id img_record_cancel
+id img_record_short
+id img_record_volume
+id llayout_recording_root
+id llayout_tip_root
+id progress_audio
+id progress_loading
+id tv_record_hint
+id tv_time
+layout activity_audio_play
+layout view_recording_layout
+string app_name
+style MyDialogStyle

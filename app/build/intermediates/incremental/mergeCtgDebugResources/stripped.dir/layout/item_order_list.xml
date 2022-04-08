@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mParentLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View style="@style/GrayLineWide" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/mOrderId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="EC2321154121454"
+            android:textColor="@color/gray_text_light"
+            android:textSize="11sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/mSendTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_btn_common_5dp"
+            android:paddingHorizontal="12dp"
+            android:text="点击发货"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mStatusTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已过期"
+            android:textColor="@color/gray_text_light"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <View style="@style/GrayLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="下单时间"
+            android:textColor="#FF989898"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/mOrderCreateTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019/06/01 14:34:46"
+            android:textColor="@color/black_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="供应商"
+            android:textColor="#FF989898"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/mSellerTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="end"
+            android:text="畅运汽配"
+            android:textColor="@color/black_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="65dp"
+            android:text="购买商品"
+            android:textColor="#FF989898"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/mPartNamesTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:lines="1"
+            android:text="前保险杠B"
+            android:textColor="@color/black_text" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/mTotalCountTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="合计:"
+            android:textColor="@color/blue_common"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTotalPriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$120.3"
+            android:textColor="@color/blue_common"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:paddingHorizontal="10dp">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="合计"-->
+    <!--            android:textColor="@color/blue_light" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="¥"-->
+    <!--            android:textColor="@color/blue_light" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/mTotalPriceTV"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginStart="2dp"-->
+    <!--            android:text="12345.00"-->
+    <!--            android:textColor="@color/blue_light" />-->
+
+    <!--    </LinearLayout>-->
+
+</LinearLayout>

@@ -1,0 +1,1769 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ctgoe.app.dingding"
+4    android:versionCode="13"
+5    android:versionName="1.0.13" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml
+10    <!-- package="$applicationId"> -->
+11    <!-- 解锁屏幕需要的权限 -->
+12    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" /> <!-- 申请电源锁需要的权限 -->
+12-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:7:5-75
+12-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:7:22-72
+13    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 震动权限 -->
+13-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:8:5-68
+13-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:8:22-65
+14    <uses-permission android:name="android.permission.VIBRATE" />
+14-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:9:5-66
+14-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:9:22-63
+15    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+15-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:10:5-83
+15-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:10:22-80
+16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+16-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:11:5-77
+16-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:11:22-74
+17    <uses-permission android:name="android.permission.CAMERA" />
+17-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:12:5-65
+17-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:12:22-62
+18    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+18-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:13:5-84
+18-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:13:22-81
+19    <uses-permission android:name="android.permission.INTERNET" />
+19-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:14:5-67
+19-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:14:22-64
+20    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+20-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:15:5-80
+20-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:15:22-77
+21    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读取通讯录 -->
+21-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:16:5-81
+21-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:16:22-78
+22    <uses-permission android:name="android.permission.READ_CONTACTS" />
+22-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:17:5-72
+22-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:17:22-69
+23    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+23-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:18:5-76
+23-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:18:22-73
+24    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+24-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:19:5-79
+24-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:19:22-76
+25    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+25-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:20:5-73
+25-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:20:22-70
+26    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+26-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:21:5-23:47
+26-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:22:9-68
+27    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+27-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:24:5-75
+27-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:24:22-72
+28    <uses-permission android:name="android.permission.READ_LOGS" />
+28-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:25:5-27:47
+28-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:26:9-52
+29
+30    <uses-feature android:name="android.hardware.camera" />
+30-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:29:5-60
+30-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:29:19-57
+31    <uses-feature android:name="android.hardware.camera.autofocus" />
+31-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:30:5-70
+31-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:30:19-67
+32    <uses-feature android:name="android.hardware.location.gps" />
+32-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:31:5-66
+32-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:31:19-63
+33
+34    <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- 录音权限 -->
+34-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:33:5-69
+34-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:33:22-66
+35    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+35-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:34:5-71
+35-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:34:22-68
+36
+37    <queries>
+37-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:36:5-38:15
+38        <package android:name="com.tencent.mm" />
+38-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:37:9-50
+38-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:37:18-47
+39    </queries>
+40
+41    <uses-feature
+41-->[com.otaliastudios:cameraview:2.6.2] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\a176f34ed8cb15ebdc8b2c15a6732f10\jetified-cameraview-2.6.2\AndroidManifest.xml:27:5-29:36
+42        android:name="android.hardware.camera.front"
+42-->[com.otaliastudios:cameraview:2.6.2] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\a176f34ed8cb15ebdc8b2c15a6732f10\jetified-cameraview-2.6.2\AndroidManifest.xml:28:9-53
+43        android:required="false" />
+43-->[com.otaliastudios:cameraview:2.6.2] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\a176f34ed8cb15ebdc8b2c15a6732f10\jetified-cameraview-2.6.2\AndroidManifest.xml:29:9-33
+44    <uses-feature
+44-->[com.otaliastudios:cameraview:2.6.2] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\a176f34ed8cb15ebdc8b2c15a6732f10\jetified-cameraview-2.6.2\AndroidManifest.xml:30:5-32:36
+45        android:name="android.hardware.microphone"
+45-->[com.otaliastudios:cameraview:2.6.2] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\a176f34ed8cb15ebdc8b2c15a6732f10\jetified-cameraview-2.6.2\AndroidManifest.xml:31:9-51
+46        android:required="false" />
+46-->[com.otaliastudios:cameraview:2.6.2] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\a176f34ed8cb15ebdc8b2c15a6732f10\jetified-cameraview-2.6.2\AndroidManifest.xml:32:9-33
+47
+48    <supports-screens
+48-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:11:5-16:39
+49        android:anyDensity="true"
+49-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:12:9-34
+50        android:largeScreens="true"
+50-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:13:9-36
+51        android:normalScreens="true"
+51-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:14:9-37
+52        android:resizeable="true"
+52-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:15:9-34
+53        android:smallScreens="true" />
+53-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:16:9-36
+54
+55    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" /> <!-- Required -->
+55-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:12:5-79
+55-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:12:22-76
+56    <permission
+56-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:11:5-13:47
+57        android:name="com.ctgoe.app.dingding.permission.JPUSH_MESSAGE"
+57-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:12:9-65
+58        android:protectionLevel="signature" /> <!-- Required  一些系统要求的权限，如访问网络等 -->
+58-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:13:9-44
+59    <uses-permission android:name="com.ctgoe.app.dingding.permission.JPUSH_MESSAGE" />
+59-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:16:5-81
+59-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:16:22-78
+60    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+60-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:17:5-79
+60-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:17:22-76
+61    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> <!-- 华为角标 -->
+61-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:22:5-73
+61-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:22:22-70
+62    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+62-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:28:5-91
+62-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:28:22-88
+63    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+63-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:32:5-78
+63-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:32:22-75
+64    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+64-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:33:5-81
+64-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:33:22-78
+65    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+65-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:34:5-76
+65-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:34:22-73
+66    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+66-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:35:5-79
+66-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:35:22-76
+67    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> <!-- Android Q后台定位权限 -->
+67-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:36:5-85
+67-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:36:22-82
+68    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+68-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:37:5-89
+68-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:37:22-86
+69    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+69-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:38:5-79
+69-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:38:22-76
+70    <uses-permission android:name="android.permission.GET_TASKS" />
+70-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:39:5-68
+70-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:39:22-65
+71    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+71-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:40:5-77
+71-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:40:22-74
+72
+73    <application
+73-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:40:5-480:19
+74        android:name="com.android.ctgapp.base.BaseApplication"
+74-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:41:9-45
+75        android:allowBackup="true"
+75-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:42:9-35
+76        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+76-->[androidx.core:core:1.5.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\9cfc3f1ab9c0f2c99cafb15cda3092ef\core-1.5.0\AndroidManifest.xml:24:18-86
+77        android:debuggable="true"
+78        android:extractNativeLibs="false"
+79        android:fullBackupContent="false"
+79-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:43:9-42
+80        android:icon="@drawable/logo_app"
+80-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:44:9-42
+81        android:label="@string/app_name"
+81-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:45:9-41
+82        android:networkSecurityConfig="@xml/network_security_config"
+82-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:46:9-69
+83        android:requestLegacyExternalStorage="true"
+83-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:47:9-52
+84        android:resizeableActivity="false"
+84-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:48:9-43
+85        android:roundIcon="@mipmap/ic_launcher_round"
+85-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:49:9-54
+86        android:supportsRtl="true"
+86-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:50:9-35
+87        android:testOnly="true"
+88        android:theme="@style/AppTheme" >
+88-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:51:9-40
+89        <activity
+89-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:54:9-56:40
+90            android:name="com.android.ctgapp.activity.home.shop.SearchGoodsActivity"
+90-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:55:13-67
+91            android:exported="false" />
+91-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:56:13-37
+92        <activity
+92-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:57:9-59:40
+93            android:name="com.android.ctgapp.activity.mine.money.RechargeMoneyHistoryActivity"
+93-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:58:13-77
+94            android:exported="false" />
+94-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:59:13-37
+95        <activity
+95-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:60:9-62:40
+96            android:name="com.android.ctgapp.activity.mine.money.MoneyPackageRechargeActivity"
+96-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:61:13-77
+97            android:exported="false" />
+97-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:62:13-37
+98        <activity
+98-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:63:9-65:40
+99            android:name="com.android.ctgapp.activity.mine.money.MyMoneyPackageActivity"
+99-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:64:13-71
+100            android:exported="false" />
+100-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:65:13-37
+101        <activity
+101-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:66:9-68:40
+102            android:name="com.android.ctgapp.activity.mine.team.InviteUserToTeamActivity"
+102-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:67:13-72
+103            android:exported="false" />
+103-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:68:13-37
+104        <activity
+104-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:69:9-71:40
+105            android:name="com.android.ctgapp.activity.message.chart.CurrentGroupChartActivity"
+105-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:70:13-77
+106            android:exported="false" />
+106-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:71:13-37
+107        <activity
+107-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:72:9-74:39
+108            android:name="com.android.ctgapp.activity.mine.company.ClientManagerSetActivity"
+108-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:73:13-75
+109            android:exported="true" />
+109-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:74:13-36
+110        <activity
+110-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:75:9-77:39
+111            android:name="com.android.ctgapp.activity.deal.QueryRecordV2Activity"
+111-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:76:13-64
+112            android:exported="true" />
+112-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:77:13-36
+113        <activity
+113-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:78:9-80:39
+114            android:name="com.android.ctgapp.activity.mine.ShouXinCompanyctivity"
+114-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:79:13-64
+115            android:exported="true" />
+115-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:80:13-36
+116        <activity
+116-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:81:9-83:39
+117            android:name="com.android.ctgapp.activity.home.CarConfigDetailActivity"
+117-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:82:13-66
+118            android:exported="true" />
+118-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:83:13-36
+119        <activity
+119-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:84:9-86:39
+120            android:name="com.android.ctgapp.WXEntryActivity"
+120-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:85:13-44
+121            android:exported="true" />
+121-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:86:13-36
+122        <activity
+122-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:87:9-91:50
+123            android:name="com.android.ctgapp.activity.mine.JumpToGzhDialogActivity"
+123-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:88:13-66
+124            android:exported="true"
+124-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:89:13-36
+125            android:launchMode="singleTop"
+125-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:90:13-43
+126            android:theme="@style/DialogTheme" />
+126-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:91:13-47
+127        <activity
+127-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:92:9-94:39
+128            android:name="com.android.ctgapp.activity.mine.alliance.AllianceChildCompanyActivity"
+128-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:93:13-80
+129            android:exported="true" />
+129-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:94:13-36
+130        <activity android:name="com.android.ctgapp.activity.home.enquiry.VinSearchHistoryActivity" />
+130-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:95:9-84
+130-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:95:19-81
+131        <activity android:name="com.android.ctgapp.activity.deal.enquire.EnquireWishDetailActivity" />
+131-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:96:9-85
+131-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:96:19-82
+132        <activity android:name="com.android.ctgapp.activity.deal.enquire.EnquireWishListActivity" />
+132-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:97:9-83
+132-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:97:19-80
+133        <activity
+133-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:98:9-101:50
+134            android:name="com.android.ctgapp.activity.other.SystemNoticeDialogActivity"
+134-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:99:13-70
+135            android:launchMode="singleTop"
+135-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:100:13-43
+136            android:theme="@style/DialogTheme" />
+136-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:101:13-47
+137        <activity
+137-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:102:9-104:47
+138            android:name="com.android.ctgapp.activity.message.SystemNoticeActivity"
+138-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:103:13-66
+139            android:launchMode="singleTask" />
+139-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:104:13-44
+140        <activity android:name="com.android.ctgapp.activity.deal.EnquireOrderConfirmActivity" />
+140-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:105:9-79
+140-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:105:19-76
+141        <activity android:name="com.android.ctgapp.activity.deal.EnquireWaitDetailActivity" />
+141-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:106:9-77
+141-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:106:19-74
+142        <activity android:name="com.android.ctgapp.activity.other.GuidePageActivity" />
+142-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:107:9-70
+142-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:107:19-67
+143        <activity android:name="com.android.ctgapp.activity.deal.CommonPaySuccessActivity" />
+143-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:108:9-76
+143-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:108:19-73
+144        <activity android:name="com.android.ctgapp.activity.mine.whitebar.PrepaymentChildActivity" />
+144-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:109:9-84
+144-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:109:19-81
+145        <activity android:name="com.android.ctgapp.activity.mine.whitebar.PrepaymentActivity" />
+145-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:110:9-79
+145-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:110:19-76
+146        <activity android:name="com.android.ctgapp.activity.home.shop.WhiteBarReturnActivity" />
+146-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:111:9-79
+146-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:111:19-76
+147        <activity
+147-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:112:9-114:46
+148            android:name="com.android.ctgapp.activity.mine.whitebar.CreditExtensionActivity"
+148-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:113:13-75
+149            android:launchMode="singleTop" />
+149-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:114:13-43
+150        <activity
+150-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:115:9-117:46
+151            android:name="com.android.ctgapp.activity.mine.whitebar.WhiteBarDetailChildActivity"
+151-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:116:13-79
+152            android:launchMode="singleTop" />
+152-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:117:13-43
+153        <activity
+153-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:118:9-120:46
+154            android:name="com.android.ctgapp.activity.mine.whitebar.WhiteBarDealDetailActivity"
+154-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:119:13-78
+155            android:launchMode="singleTop" />
+155-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:120:13-43
+156        <activity
+156-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:121:9-123:46
+157            android:name="com.android.ctgapp.activity.mine.whitebar.WhiteBarDetailActivity"
+157-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:122:13-74
+158            android:launchMode="singleTop" />
+158-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:123:13-43
+159        <activity
+159-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:124:9-126:46
+160            android:name="com.android.ctgapp.activity.mine.whitebar.CheckFlowActivity"
+160-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:125:13-69
+161            android:launchMode="singleTop" />
+161-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:126:13-43
+162        <activity
+162-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:127:9-129:47
+163            android:name="com.android.ctgapp.activity.mine.whitebar.WhiteBarV2Activity"
+163-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:128:13-70
+164            android:launchMode="singleTask" />
+164-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:129:13-44
+165        <activity
+165-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:130:9-133:47
+166            android:name="com.ctgoe.app.wl.wxapi.WXPayEntryActivity"
+166-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:131:13-69
+167            android:exported="true"
+167-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:132:13-36
+168            android:launchMode="singleTask" />
+168-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:133:13-44
+169        <activity
+169-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:134:9-137:47
+170            android:name="com.ctgoe.app.dingding.wxapi.WXPayEntryActivity"
+170-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:135:13-75
+171            android:exported="true"
+171-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:136:13-36
+172            android:launchMode="singleTask" />
+172-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:137:13-44
+173        <activity
+173-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:138:9-141:47
+174            android:name="com.ctgoe.app.dingding.wxapi.WXEntryActivity"
+174-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:139:13-72
+175            android:exported="true"
+175-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:140:13-36
+176            android:launchMode="singleTask" />
+176-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:141:13-44
+177        <activity
+177-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:142:9-145:46
+178            android:name="com.ctgoe.app.lanjing.wxapi.WXPayEntryActivity"
+178-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:143:13-74
+179            android:exported="true"
+179-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:144:13-36
+180            android:launchMode="singleTop" />
+180-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:145:13-43
+181        <activity
+181-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:146:9-149:46
+182            android:name="com.android.ctgapp.wxapi.WXPayEntryActivity"
+182-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:147:13-53
+183            android:exported="true"
+183-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:148:13-36
+184            android:launchMode="singleTop" />
+184-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:149:13-43
+185        <activity
+185-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:150:9-152:46
+186            android:name="com.android.ctgapp.activity.home.enquiry.EpcPartDetailActivity"
+186-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:151:13-72
+187            android:launchMode="singleTop" />
+187-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:152:13-43
+188        <activity
+188-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:153:9-155:46
+189            android:name="com.android.ctgapp.activity.home.enquiry.EpcDetailActivity"
+189-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:154:13-68
+190            android:launchMode="singleTop" />
+190-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:155:13-43
+191        <activity
+191-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:156:9-158:46
+192            android:name="com.android.ctgapp.activity.home.enquiry.EPCActivity"
+192-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:157:13-62
+193            android:launchMode="singleTop" />
+193-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:158:13-43
+194        <activity
+194-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:159:9-161:46
+195            android:name="com.android.ctgapp.activity.deal.QueryRecordDetailActivity"
+195-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:160:13-68
+196            android:launchMode="singleTop" />
+196-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:161:13-43
+197        <activity
+197-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:162:9-164:46
+198            android:name="com.android.ctgapp.activity.home.enquiry.BatchAddPartSelectMoreActivity"
+198-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:163:13-81
+199            android:launchMode="singleTop" />
+199-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:164:13-43
+200        <activity
+200-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:165:9-167:46
+201            android:name="com.android.ctgapp.activity.deal.QueryRecordActivity"
+201-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:166:13-62
+202            android:launchMode="singleTop" />
+202-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:167:13-43
+203        <activity
+203-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:168:9-170:46
+204            android:name="com.android.ctgapp.activity.home.enquiry.AddPartActivity"
+204-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:169:13-66
+205            android:launchMode="singleTop" />
+205-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:170:13-43
+206        <activity
+206-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:171:9-173:46
+207            android:name="com.android.ctgapp.activity.home.enquiry.BatchAddPartActivity"
+207-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:172:13-71
+208            android:launchMode="singleTop" />
+208-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:173:13-43
+209        <activity
+209-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:174:9-176:46
+210            android:name="com.android.ctgapp.activity.home.enquiry.EnquiryCommonSelectActivity"
+210-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:175:13-78
+211            android:launchMode="singleTop" />
+211-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:176:13-43
+212        <activity
+212-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:177:9-180:55
+213            android:name="com.android.ctgapp.activity.home.enquiry.EnquiryActivity"
+213-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:178:13-66
+214            android:launchMode="singleTask"
+214-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:179:13-44
+215            android:windowSoftInputMode="adjustPan" />
+215-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:180:13-52
+216        <activity
+216-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:181:9-183:46
+217            android:name="com.android.ctgapp.activity.mine.alliance.AllianceDetailActivity"
+217-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:182:13-74
+218            android:launchMode="singleTop" />
+218-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:183:13-43
+219        <activity
+219-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:184:9-186:46
+220            android:name="com.android.ctgapp.activity.mine.setting.AboutAppActivity"
+220-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:185:13-67
+221            android:launchMode="singleTop" />
+221-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:186:13-43
+222        <activity
+222-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:187:9-189:46
+223            android:name="com.android.ctgapp.activity.login.UserAgreementActivity"
+223-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:188:13-65
+224            android:launchMode="singleTop" />
+224-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:189:13-43
+225        <activity
+225-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:190:9-192:46
+226            android:name="com.android.ctgapp.activity.mine.client.AuthInviteActivity"
+226-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:191:13-68
+227            android:launchMode="singleTop" />
+227-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:192:13-43
+228        <activity
+228-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:193:9-195:46
+229            android:name="com.android.ctgapp.activity.mine.company.CompanyAttestationActivity"
+229-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:194:13-77
+230            android:launchMode="singleTop" />
+230-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:195:13-43
+231        <activity
+231-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:196:9-198:46
+232            android:name="com.android.ctgapp.activity.mine.company.CompanyIntroActivity"
+232-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:197:13-71
+233            android:launchMode="singleTop" />
+233-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:198:13-43
+234        <activity
+234-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:199:9-201:46
+235            android:name="com.android.ctgapp.activity.message.chart.card.CardShareRecentChartActivity"
+235-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:200:13-85
+236            android:launchMode="singleTop" />
+236-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:201:13-43
+237        <activity
+237-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:202:9-204:46
+238            android:name="com.android.ctgapp.activity.message.chart.card.DingDingContactShareActivity"
+238-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:203:13-85
+239            android:launchMode="singleTop" />
+239-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:204:13-43
+240        <activity
+240-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:205:9-207:46
+241            android:name="com.android.ctgapp.activity.message.chart.PersonInfoActivity"
+241-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:206:13-70
+242            android:launchMode="singleTop" />
+242-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:207:13-43
+243        <activity
+243-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:208:9-210:46
+244            android:name="com.android.ctgapp.activity.mine.company.CompanyInfoSettingActivity"
+244-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:209:13-77
+245            android:launchMode="singleTop" />
+245-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:210:13-43
+246        <activity
+246-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:211:9-213:46
+247            android:name="com.android.ctgapp.activity.mine.friend.FriendCompanyActivity"
+247-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:212:13-71
+248            android:launchMode="singleTop" />
+248-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:213:13-43
+249        <activity
+249-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:214:9-216:46
+250            android:name="com.android.ctgapp.activity.mine.team.ManagementTeamActivity"
+250-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:215:13-70
+251            android:launchMode="singleTop" />
+251-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:216:13-43
+252        <activity
+252-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:217:9-219:46
+253            android:name="com.android.ctgapp.activity.mine.team.ManagementTeamMenuActivity"
+253-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:218:13-74
+254            android:launchMode="singleTop" />
+254-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:219:13-43
+255        <activity
+255-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:220:9-222:46
+256            android:name="com.android.ctgapp.activity.message.chart.ChartOrderActivity"
+256-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:221:13-70
+257            android:launchMode="singleTop" />
+257-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:222:13-43
+258        <activity
+258-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:223:9-225:46
+259            android:name="com.android.ctgapp.activity.message.chart.TakePhotoActivity"
+259-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:224:13-69
+260            android:launchMode="singleTop" />
+260-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:225:13-43
+261        <activity
+261-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:226:9-229:58
+262            android:name="com.android.ctgapp.activity.message.chart.CurrentChartActivity"
+262-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:227:13-72
+263            android:launchMode="singleTop"
+263-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:228:13-43
+264            android:windowSoftInputMode="adjustResize" />
+264-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:229:13-55
+265        <activity
+265-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:230:9-232:46
+266            android:name="com.android.ctgapp.activity.mine.VisitorActivity"
+266-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:231:13-58
+267            android:launchMode="singleTop" />
+267-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:232:13-43
+268        <activity
+268-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:233:9-235:46
+269            android:name="com.android.ctgapp.activity.mine.team.ApplyNotifyActivity"
+269-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:234:13-67
+270            android:launchMode="singleTop" />
+270-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:235:13-43
+271        <activity
+271-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:236:9-238:46
+272            android:name="com.android.ctgapp.activity.mine.ShareAppActivity"
+272-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:237:13-59
+273            android:launchMode="singleTop" />
+273-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:238:13-43
+274        <activity
+274-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:239:9-241:46
+275            android:name="com.android.ctgapp.activity.mine.whitebar.WhiteBarActivity"
+275-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:240:13-68
+276            android:launchMode="singleTop" />
+276-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:241:13-43
+277        <activity
+277-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:242:9-244:46
+278            android:name="com.android.ctgapp.activity.mine.ALLCouponsActivity"
+278-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:243:13-61
+279            android:launchMode="singleTop" />
+279-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:244:13-43
+280        <activity
+280-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:245:9-247:46
+281            android:name="com.android.ctgapp.activity.mine.alliance.AllianceCanJoinActivity"
+281-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:246:13-75
+282            android:launchMode="singleTop" />
+282-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:247:13-43
+283        <activity
+283-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:248:9-250:46
+284            android:name="com.android.ctgapp.activity.mine.alliance.JoinAllianceActivity"
+284-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:249:13-72
+285            android:launchMode="singleTop" />
+285-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:250:13-43
+286        <activity
+286-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:251:9-253:47
+287            android:name="com.android.ctgapp.activity.mine.balance.BalanceTopUpActivity"
+287-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:252:13-71
+288            android:launchMode="singleTask" />
+288-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:253:13-44
+289        <activity
+289-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:254:9-256:46
+290            android:name="com.android.ctgapp.activity.mine.balance.BalanceSelectActivity"
+290-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:255:13-72
+291            android:launchMode="singleTop" />
+291-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:256:13-43
+292        <activity
+292-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:257:9-259:46
+293            android:name="com.android.ctgapp.activity.mine.alliance.CreateAllianceActivity"
+293-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:258:13-74
+294            android:launchMode="singleTop" />
+294-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:259:13-43
+295        <activity
+295-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:260:9-262:46
+296            android:name="com.android.ctgapp.activity.mine.alliance.MyAllianceActivity"
+296-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:261:13-70
+297            android:launchMode="singleTop" />
+297-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:262:13-43
+298        <activity
+298-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:263:9-265:46
+299            android:name="com.android.ctgapp.activity.mine.balance.CompanyBalanceActivity"
+299-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:264:13-73
+300            android:launchMode="singleTop" />
+300-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:265:13-43
+301        <activity
+301-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:266:9-268:46
+302            android:name="com.android.ctgapp.activity.login.CreateOrJoinCompanyActivity"
+302-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:267:13-71
+303            android:launchMode="singleTop" />
+303-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:268:13-43
+304        <activity
+304-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:269:9-271:46
+305            android:name="com.android.ctgapp.activity.login.RegisterActivity"
+305-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:270:13-60
+306            android:launchMode="singleTop" />
+306-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:271:13-43
+307        <activity
+307-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:272:9-274:46
+308            android:name="com.android.ctgapp.activity.mine.company.JoinCompanyByCodeActivity"
+308-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:273:13-76
+309            android:launchMode="singleTop" />
+309-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:274:13-43
+310        <activity
+310-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:275:9-277:46
+311            android:name="com.android.ctgapp.activity.mine.setting.PersonalAuthenticationActivity"
+311-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:276:13-81
+312            android:launchMode="singleTop" />
+312-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:277:13-43
+313        <activity
+313-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:278:9-286:20
+314            android:name="com.android.ctgapp.activity.other.SplashPageActivity"
+314-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:279:13-62
+315            android:theme="@style/AppTheme.StartingWindowTheme" >
+315-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:280:13-64
+316            <intent-filter>
+316-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:281:13-285:29
+317                <action android:name="android.intent.action.MAIN" />
+317-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:282:17-69
+317-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:282:25-66
+318
+319                <category android:name="android.intent.category.LAUNCHER" />
+319-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:284:17-77
+319-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:284:27-74
+320            </intent-filter>
+321        </activity>
+322        <activity
+322-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:287:9-289:46
+323            android:name="com.android.ctgapp.activity.deal.ReturnGoodsDetailActivity"
+323-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:288:13-68
+324            android:launchMode="singleTop" />
+324-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:289:13-43
+325        <activity
+325-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:290:9-292:46
+326            android:name="com.android.ctgapp.adapter.chart.ChartOrderDetailActivity"
+326-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:291:13-67
+327            android:launchMode="singleTop" />
+327-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:292:13-43
+328        <activity
+328-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:293:9-295:46
+329            android:name="com.android.ctgapp.activity.home.shop.CouponActivity"
+329-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:294:13-62
+330            android:launchMode="singleTop" />
+330-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:295:13-43
+331        <activity
+331-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:296:9-298:46
+332            android:name="com.android.ctgapp.activity.deal.AfterSaleActivity"
+332-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:297:13-60
+333            android:launchMode="singleTop" />
+333-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:298:13-43
+334        <activity
+334-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:299:9-301:46
+335            android:name="com.android.ctgapp.activity.address.AddressListActivity"
+335-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:300:13-65
+336            android:launchMode="singleTop" />
+336-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:301:13-43
+337        <activity
+337-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:302:9-304:46
+338            android:name="com.android.ctgapp.activity.deal.LaunchAfterSaleActivity"
+338-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:303:13-66
+339            android:launchMode="singleTop" />
+339-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:304:13-43
+340        <activity
+340-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:305:9-307:46
+341            android:name="com.android.ctgapp.activity.home.shop.PayResultActivity"
+341-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:306:13-65
+342            android:launchMode="singleTop" />
+342-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:307:13-43
+343        <activity
+343-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:308:9-310:46
+344            android:name="com.android.ctgapp.activity.deal.OrderDetailActivity"
+344-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:309:13-62
+345            android:launchMode="singleTop" />
+345-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:310:13-43
+346        <activity
+346-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:311:9-313:46
+347            android:name="com.android.ctgapp.activity.home.shop.OrderConfirmSingleActivity"
+347-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:312:13-74
+348            android:launchMode="singleTop" />
+348-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:313:13-43
+349        <activity
+349-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:314:9-316:46
+350            android:name="com.android.ctgapp.activity.address.AddressEditActivity"
+350-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:315:13-65
+351            android:launchMode="singleTop" />
+351-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:316:13-43
+352        <activity
+352-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:317:9-319:46
+353            android:name="com.android.ctgapp.activity.home.shop.CheckoutActivity"
+353-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:318:13-64
+354            android:launchMode="singleTop" />
+354-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:319:13-43
+355        <activity
+355-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:320:9-322:46
+356            android:name="com.android.ctgapp.activity.home.shop.TrolleyActivity"
+356-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:321:13-63
+357            android:launchMode="singleTop" />
+357-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:322:13-43
+358        <activity
+358-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:323:9-325:46
+359            android:name="com.android.ctgapp.activity.home.shop.VulnerablePartShopActivity"
+359-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:324:13-74
+360            android:launchMode="singleTop" />
+360-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:325:13-43
+361        <activity android:name="com.android.ctgapp.activity.home.VinSearchActivity" />
+361-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:326:9-69
+361-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:326:19-66
+362        <activity
+362-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:327:9-330:67
+363            android:name="com.android.ctgapp.activity.home.shop.OrderConfirmActivity"
+363-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:328:13-68
+364            android:launchMode="singleTop"
+364-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:329:13-43
+365            android:windowSoftInputMode="adjustPan|stateHidden" />
+365-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:330:13-64
+366        <activity
+366-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:331:9-333:46
+367            android:name="com.android.ctgapp.activity.home.shop.GoodsDetailActivity"
+367-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:332:13-67
+368            android:launchMode="singleTop" />
+368-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:333:13-43
+369        <activity
+369-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:334:9-336:46
+370            android:name="com.android.ctgapp.activity.home.shop.PartShopActivity"
+370-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:335:13-64
+371            android:launchMode="singleTop" />
+371-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:336:13-43
+372        <activity
+372-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:337:9-339:46
+373            android:name="com.android.ctgapp.activity.mine.company.CompanyContactSelectActivity"
+373-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:338:13-79
+374            android:launchMode="singleTop" />
+374-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:339:13-43
+375        <activity
+375-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:340:9-342:46
+376            android:name="com.android.ctgapp.activity.mine.client.AddClientActivity"
+376-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:341:13-67
+377            android:launchMode="singleTop" />
+377-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:342:13-43
+378        <activity
+378-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:343:9-345:47
+379            android:name="com.android.ctgapp.activity.mine.client.ClientManagementActivity"
+379-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:344:13-74
+380            android:launchMode="singleTask" />
+380-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:345:13-44
+381        <activity
+381-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:346:9-348:46
+382            android:name="com.android.ctgapp.activity.mine.team.DepartmentSelectActivity"
+382-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:347:13-72
+383            android:launchMode="singleTop" />
+383-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:348:13-43
+384        <activity
+384-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:349:9-351:46
+385            android:name="com.android.ctgapp.activity.mine.team.SelectPositionActivity"
+385-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:350:13-70
+386            android:launchMode="singleTop" />
+386-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:351:13-43
+387        <activity
+387-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:352:9-354:46
+388            android:name="com.android.ctgapp.activity.mine.team.ApplyNotificationActivity"
+388-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:353:13-73
+389            android:launchMode="singleTop" />
+389-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:354:13-43
+390        <activity
+390-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:355:9-357:46
+391            android:name="com.android.ctgapp.activity.mine.friend.PhoneContactActivity"
+391-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:356:13-70
+392            android:launchMode="singleTop" />
+392-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:357:13-43
+393        <activity
+393-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:358:9-360:46
+394            android:name="com.android.ctgapp.activity.mine.friend.AddSelectGroupActivity"
+394-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:359:13-72
+395            android:launchMode="singleTop" />
+395-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:360:13-43
+396        <activity
+396-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:361:9-363:46
+397            android:name="com.android.ctgapp.activity.mine.friend.AddBusinessFriendActivity"
+397-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:362:13-75
+398            android:launchMode="singleTop" />
+398-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:363:13-43
+399        <activity
+399-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:364:9-366:46
+400            android:name="com.android.ctgapp.activity.mine.friend.CustomGroupSettingActivity"
+400-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:365:13-76
+401            android:launchMode="singleTop" />
+401-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:366:13-43
+402        <activity
+402-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:367:9-369:46
+403            android:name="com.android.ctgapp.activity.mine.money.RechargeCommitActivity"
+403-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:368:13-71
+404            android:launchMode="singleTop" />
+404-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:369:13-43
+405        <activity
+405-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:370:9-372:46
+406            android:name="com.android.ctgapp.activity.mine.friend.BusinessFriendActivity"
+406-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:371:13-72
+407            android:launchMode="singleTop" />
+407-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:372:13-43
+408        <activity
+408-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:373:9-375:46
+409            android:name="com.android.ctgapp.activity.mine.team.AddOrEditMemberActivity"
+409-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:374:13-71
+410            android:launchMode="singleTop" />
+410-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:375:13-43
+411        <activity
+411-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:376:9-378:46
+412            android:name="com.android.ctgapp.activity.mine.team.MyTeamActivity"
+412-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:377:13-62
+413            android:launchMode="singleTop" />
+413-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:378:13-43
+414        <activity
+414-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:379:9-381:46
+415            android:name="com.android.ctgapp.activity.mine.PersonInfoChangeActivity"
+415-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:380:13-67
+416            android:launchMode="singleTop" />
+416-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:381:13-43
+417        <activity
+417-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:382:9-384:46
+418            android:name="com.android.ctgapp.activity.mine.setting.ChangePasswordActivity"
+418-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:383:13-73
+419            android:launchMode="singleTop" />
+419-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:384:13-43
+420        <activity
+420-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:385:9-387:46
+421            android:name="com.android.ctgapp.activity.mine.setting.SettingActivity"
+421-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:386:13-66
+422            android:launchMode="singleTop" />
+422-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:387:13-43
+423        <activity
+423-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:388:9-390:46
+424            android:name="com.android.ctgapp.activity.mine.company.CompanyDetailActivity"
+424-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:389:13-72
+425            android:launchMode="singleTop" />
+425-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:390:13-43
+426        <activity
+426-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:391:9-393:46
+427            android:name="com.android.ctgapp.activity.login.ForgetPasswordActivity"
+427-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:392:13-66
+428            android:launchMode="singleTop" />
+428-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:393:13-43
+429        <activity
+429-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:394:9-396:47
+430            android:name="com.android.ctgapp.activity.login.LoginActivity"
+430-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:395:13-57
+431            android:launchMode="singleTask" />
+431-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:396:13-44
+432        <activity
+432-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:397:9-399:46
+433            android:name="com.android.ctgapp.activity.company.JoinCompanyActivity"
+433-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:398:13-65
+434            android:launchMode="singleTop" />
+434-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:399:13-43
+435        <activity
+435-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:400:9-402:46
+436            android:name="com.android.ctgapp.activity.company.CreateCompanyActivity"
+436-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:401:13-67
+437            android:launchMode="singleTop" />
+437-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:402:13-43
+438        <activity
+438-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:403:9-405:46
+439            android:name="com.android.ctgapp.activity.company.SwitchCompanyActivity"
+439-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:404:13-67
+440            android:launchMode="singleTop" />
+440-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:405:13-43
+441        <activity
+441-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:406:9-408:47
+442            android:name="com.android.ctgapp.activity.MainActivity"
+442-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:407:13-50
+443            android:launchMode="singleTask" />
+443-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:408:13-44
+444        <!--
+445         android:process=":remote"
+446          android:process=":pushcore"
+447        -->
+448        <service
+448-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:413:9-416:40
+449            android:name="com.android.ctgapp.service.AppService"
+449-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:414:13-47
+450            android:enabled="true"
+450-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:415:13-35
+451            android:exported="false" /> <!-- android:authorities="com.android.ctgapp.fileProvider" -->
+451-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:416:13-37
+452        <service
+452-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:417:9-425:19
+453            android:name="com.android.ctgapp.service.JpushService"
+453-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:418:13-49
+454            android:enabled="true"
+454-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:419:13-35
+455            android:exported="false"
+455-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:420:13-37
+456            android:process=":pushcore" >
+456-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:421:13-40
+457            <intent-filter>
+457-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:422:13-424:29
+458                <action android:name="cn.jiguang.user.service.action" />
+458-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:423:17-73
+458-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:423:25-70
+459            </intent-filter>
+460        </service>
+461
+462        <receiver
+462-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:427:9-436:20
+463            android:name="com.android.ctgapp.receiver.JPushReceiver"
+463-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:428:13-51
+464            android:enabled="true"
+464-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:429:13-35
+465            android:exported="false" >
+465-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:430:13-37
+466            <intent-filter>
+466-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:431:13-435:29
+467                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+467-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:432:17-82
+467-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:432:25-79
+468
+469                <category android:name="$applicationId" />
+469-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:434:17-59
+469-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:434:27-56
+470            </intent-filter>
+471        </receiver>
+472        <receiver
+472-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:437:9-451:20
+473            android:name="com.android.ctgapp.boradcast.MyBroadcastReceiver"
+473-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:438:13-58
+474            android:enabled="true"
+474-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:439:13-35
+475            android:exported="false" >
+475-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:440:13-37
+476            <intent-filter>
+476-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:441:13-450:29
+477                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+477-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:442:17-79
+477-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:442:25-76
+478                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+478-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:443:17-83
+478-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:443:25-80
+479                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+479-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:444:17-88
+479-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:444:25-85
+480                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+480-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:445:17-86
+480-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:445:25-83
+481                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+481-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:446:17-92
+481-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:446:25-89
+482                <action android:name="cn.jpush.android.intent.CONNECTION" />
+482-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:447:17-77
+482-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:447:25-74
+483
+484                <category android:name="com.ctgoe.app.dingding" />
+484-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:449:27-58
+485            </intent-filter>
+486        </receiver>
+487
+488        <provider
+489            android:name="com.android.ctgapp.util.FileProvider"
+489-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:454:13-46
+490            android:authorities="com.android.ctgapp.fileProvider"
+490-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:455:13-51
+491            android:exported="false"
+491-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:456:13-37
+492            android:grantUriPermissions="true" >
+492-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:457:13-47
+493            <meta-data
+493-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:459:13-462:49
+494                android:name="android.support.FILE_PROVIDER_PATHS"
+494-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:460:17-67
+495                android:resource="@xml/file_paths" />
+495-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:461:17-51
+496        </provider> <!-- bugly -->
+497        <!-- 配置APP ID -->
+498        <!-- <meta-data -->
+499        <!-- android:name="BUGLY_APPID" -->
+500        <!-- android:value="f7810dd409" /> &lt;!&ndash; 配置APP渠道号 &ndash;&gt; -->
+501        <meta-data
+501-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:468:9-470:42
+502            android:name="BUGLY_APPID"
+502-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:469:13-39
+503            android:value="61d0cf3092" /> <!-- 配置APP渠道号 -->
+503-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:470:13-39
+504        <meta-data
+505            android:name="BUGLY_APP_CHANNEL"
+505-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:472:13-45
+506            android:value="com.android.ctgapp.fileProvider" /> <!-- 配置Bugly调试模式（true或者false） -->
+506-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:473:13-45
+507        <meta-data
+507-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:474:9-476:36
+508            android:name="BUGLY_ENABLE_DEBUG"
+508-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:475:13-46
+509            android:value="true" /> <!-- 配置APP版本号 -->
+509-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:476:13-33
+510        <meta-data
+510-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:477:9-479:37
+511            android:name="BUGLY_APP_VERSION"
+511-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:478:13-45
+512            android:value="1.0.0" />
+512-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:479:13-34
+513
+514        <activity
+514-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:11:9-17:65
+515            android:name="com.glance.guolindev.ui.db.DBActivity"
+515-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:12:13-65
+516            android:icon="@mipmap/glance_library_ic_launcher"
+516-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:13:13-62
+517            android:label="@string/glance_library_glance"
+517-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:14:13-58
+518            android:roundIcon="@mipmap/glance_library_ic_launcher_round"
+518-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:15:13-73
+519            android:taskAffinity="com.glance.guolindev.com.ctgoe.app.dingding"
+519-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:16:13-73
+520            android:theme="@style/GlanceLibraryActivityTheme" />
+520-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:17:13-62
+521
+522        <activity-alias
+522-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:19:9-30:26
+523            android:name="com.glance.guolindev.ui.db.DBActivityLauncher"
+523-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:20:13-73
+524            android:icon="@mipmap/glance_library_ic_launcher"
+524-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:21:13-62
+525            android:label="@string/glance_library_glance"
+525-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:22:13-58
+526            android:targetActivity="com.glance.guolindev.ui.db.DBActivity"
+526-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:23:13-75
+527            android:taskAffinity="com.glance.guolindev.com.ctgoe.app.dingding" >
+527-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:24:13-73
+528            <intent-filter>
+528-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:281:13-285:29
+529                <action android:name="android.intent.action.MAIN" />
+529-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:282:17-69
+529-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:282:25-66
+530
+531                <category android:name="android.intent.category.LAUNCHER" />
+531-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:284:17-77
+531-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:284:27-74
+532            </intent-filter>
+533        </activity-alias>
+534
+535        <activity
+535-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:32:9-35:65
+536            android:name="com.glance.guolindev.ui.table.TableActivity"
+536-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:33:13-71
+537            android:exported="false"
+537-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:34:13-37
+538            android:theme="@style/GlanceLibraryActivityTheme" />
+538-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:35:13-62
+539        <activity
+539-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:36:9-39:65
+540            android:name="com.glance.guolindev.ui.data.DataActivity"
+540-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:37:13-69
+541            android:exported="false"
+541-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:38:13-37
+542            android:theme="@style/GlanceLibraryActivityTheme" />
+542-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:39:13-62
+543
+544        <provider
+544-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:41:9-49:20
+545            android:name="androidx.startup.InitializationProvider"
+545-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:42:13-67
+546            android:authorities="com.ctgoe.app.dingding.androidx-startup"
+546-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:43:13-68
+547            android:exported="false" >
+547-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:44:13-37
+548            <meta-data
+548-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:46:13-48:52
+549                android:name="com.glance.guolindev.initializer.GlanceInitializer"
+549-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:47:17-82
+550                android:value="androidx.startup" />
+550-->[com.glance.guolindev:glance:1.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\08593bdefc1a4eb7a5e4d1a2ddad5ea4\jetified-glance-1.0.0\AndroidManifest.xml:48:17-49
+551        </provider>
+552
+553        <service
+553-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:29:9-32:45
+554            android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"
+554-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:30:13-80
+555            android:enabled="false"
+555-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:31:13-36
+556            android:process=":leakcanary" />
+556-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:32:13-42
+557        <service
+557-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:33:9-36:45
+558            android:name="com.squareup.leakcanary.DisplayLeakService"
+558-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:34:13-70
+559            android:enabled="false"
+559-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:35:13-36
+560            android:process=":leakcanary" />
+560-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:36:13-42
+561
+562        <provider
+562-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:38:9-46:20
+563            android:name="com.squareup.leakcanary.internal.LeakCanaryFileProvider"
+563-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:39:13-83
+564            android:authorities="com.squareup.leakcanary.fileprovider.com.ctgoe.app.dingding"
+564-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:40:13-88
+565            android:exported="false"
+565-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:41:13-37
+566            android:grantUriPermissions="true" >
+566-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:42:13-47
+567            <meta-data
+567-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:459:13-462:49
+568                android:name="android.support.FILE_PROVIDER_PATHS"
+568-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:460:17-67
+569                android:resource="@xml/leak_canary_file_paths" />
+569-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:461:17-51
+570        </provider>
+571
+572        <activity
+572-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:48:9-61:20
+573            android:name="com.squareup.leakcanary.internal.DisplayLeakActivity"
+573-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:49:13-80
+574            android:enabled="false"
+574-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:50:13-36
+575            android:icon="@mipmap/leak_canary_icon"
+575-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:51:13-52
+576            android:label="@string/leak_canary_display_activity_label"
+576-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:52:13-71
+577            android:process=":leakcanary"
+577-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:53:13-42
+578            android:taskAffinity="com.squareup.leakcanary.com.ctgoe.app.dingding"
+578-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:54:13-76
+579            android:theme="@style/leak_canary_LeakCanary.Base" >
+579-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:55:13-63
+580            <intent-filter>
+580-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:281:13-285:29
+581                <action android:name="android.intent.action.MAIN" />
+581-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:282:17-69
+581-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:282:25-66
+582
+583                <category android:name="android.intent.category.LAUNCHER" />
+583-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:284:17-77
+583-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:284:27-74
+584            </intent-filter>
+585        </activity>
+586        <activity
+586-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:62:9-71:68
+587            android:name="com.squareup.leakcanary.internal.RequestStoragePermissionActivity"
+587-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:63:13-93
+588            android:enabled="false"
+588-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:64:13-36
+589            android:excludeFromRecents="true"
+589-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:65:13-46
+590            android:icon="@mipmap/leak_canary_icon"
+590-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:66:13-52
+591            android:label="@string/leak_canary_storage_permission_activity_label"
+591-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:67:13-82
+592            android:process=":leakcanary"
+592-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:68:13-42
+593            android:roundIcon="@mipmap/leak_canary_icon"
+593-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:69:13-57
+594            android:taskAffinity="com.squareup.leakcanary.com.ctgoe.app.dingding"
+594-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:70:13-76
+595            android:theme="@style/leak_canary_Theme.Transparent" />
+595-->[com.squareup.leakcanary:leakcanary-android:1.6.3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\c02eddbc3c2b7c9c01b4a7a0837fb0ba\jetified-leakcanary-android-1.6.3\AndroidManifest.xml:71:13-65
+596        <activity
+596-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:10:9-15:75
+597            android:name="com.blankj.utilcode.util.Utils$TransActivity"
+597-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:11:13-72
+598            android:configChanges="orientation|keyboardHidden|screenSize"
+598-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:12:13-74
+599            android:multiprocess="true"
+599-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:13:13-40
+600            android:theme="@style/ActivityTranslucent"
+600-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:14:13-55
+601            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+601-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:15:13-72
+602
+603        <provider
+603-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:17:9-26:20
+604            android:name="com.blankj.utilcode.util.Utils$FileProvider4UtilCode"
+604-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:18:13-80
+605            android:authorities="com.ctgoe.app.dingding.utilcode.provider"
+605-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:19:13-69
+606            android:exported="false"
+606-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:20:13-37
+607            android:grantUriPermissions="true"
+607-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:21:13-47
+608            android:multiprocess="true" >
+608-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:22:13-40
+609            <meta-data
+609-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:459:13-462:49
+610                android:name="android.support.FILE_PROVIDER_PATHS"
+610-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:460:17-67
+611                android:resource="@xml/util_code_provider_paths" />
+611-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:461:17-51
+612        </provider>
+613
+614        <service android:name="com.blankj.utilcode.util.MessengerUtils$ServerService" >
+614-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:28:9-32:19
+614-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:28:18-86
+615            <intent-filter>
+615-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:29:13-31:29
+616                <action android:name="com.ctgoe.app.dingding.messenger" />
+616-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:30:17-69
+616-->[com.blankj:utilcodex:1.26.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\86ebc2ba1024aa13fcbd0040a8c54449\jetified-utilcodex-1.26.0\AndroidManifest.xml:30:25-66
+617            </intent-filter>
+618        </service>
+619
+620        <activity
+620-->[:mp3record] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\mp3record\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-19:52
+621            android:name="com.activity.AudioPlayActivity"
+621-->[:mp3record] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\mp3record\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-58
+622            android:theme="@style/MyDialogStyle" />
+622-->[:mp3record] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\mp3record\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-49
+623        <activity
+623-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-15:69
+624            android:name="com.ocrgroup.activity.VinCropActivity"
+624-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-65
+625            android:screenOrientation="portrait"
+625-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-49
+626            android:theme="@android:style/Theme.Light.NoTitleBar" />
+626-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-66
+627        <activity
+627-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-19:69
+628            android:name="com.ocrgroup.activity.VinScanActivity"
+628-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-65
+629            android:screenOrientation="portrait"
+629-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-49
+630            android:theme="@android:style/Theme.Light.NoTitleBar" />
+630-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-66
+631        <activity
+631-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:9-22:52
+632            android:name="com.ocrgroup.activity.VinRecogActivity"
+632-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-66
+633            android:screenOrientation="portrait" />
+633-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-49
+634        <activity
+634-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:9-26:66
+635            android:name="com.ocrgroup.activity.VinCameraActivity"
+635-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-67
+636            android:screenOrientation="portrait"
+636-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-49
+637            android:theme="@style/Theme.AppCompat.NoActionBar" />
+637-->[:VinLibrary] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-63
+638        <activity
+638-->[:image] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:9-15:56
+639            android:name="me.minetsh.imaging.IMGGalleryActivity"
+639-->[:image] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-65
+640            android:theme="@style/ImageGalleryTheme" />
+640-->[:image] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-53
+641        <activity
+641-->[:image] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-19:63
+642            android:name="me.minetsh.imaging.IMGEditActivity"
+642-->[:image] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-62
+643            android:theme="@style/ImageEditTheme"
+643-->[:image] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-50
+644            android:windowSoftInputMode="stateAlwaysHidden" />
+644-->[:image] C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-60
+645
+646        <provider
+646-->[com.github.xuexiangjys:XUI:1.1.7] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\027b512837fad2dd8c2a61e41f3e3aef\jetified-XUI-1.1.7\AndroidManifest.xml:10:9-14:43
+647            android:name="com.xuexiang.xui.XUIInitProvider"
+647-->[com.github.xuexiangjys:XUI:1.1.7] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\027b512837fad2dd8c2a61e41f3e3aef\jetified-XUI-1.1.7\AndroidManifest.xml:11:13-60
+648            android:authorities="com.ctgoe.app.dingding.xui-init-provider"
+648-->[com.github.xuexiangjys:XUI:1.1.7] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\027b512837fad2dd8c2a61e41f3e3aef\jetified-XUI-1.1.7\AndroidManifest.xml:12:13-69
+649            android:exported="false"
+649-->[com.github.xuexiangjys:XUI:1.1.7] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\027b512837fad2dd8c2a61e41f3e3aef\jetified-XUI-1.1.7\AndroidManifest.xml:13:13-37
+650            android:multiprocess="true" />
+650-->[com.github.xuexiangjys:XUI:1.1.7] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\027b512837fad2dd8c2a61e41f3e3aef\jetified-XUI-1.1.7\AndroidManifest.xml:14:13-40
+651
+652        <activity
+652-->[com.github.xuexiangjys:XUI:1.1.7] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\027b512837fad2dd8c2a61e41f3e3aef\jetified-XUI-1.1.7\AndroidManifest.xml:16:9-18:59
+653            android:name="com.xuexiang.xui.widget.imageview.preview.ui.PreviewActivity"
+653-->[com.github.xuexiangjys:XUI:1.1.7] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\027b512837fad2dd8c2a61e41f3e3aef\jetified-XUI-1.1.7\AndroidManifest.xml:17:13-88
+654            android:theme="@style/XUITheme.Translucent" />
+654-->[com.github.xuexiangjys:XUI:1.1.7] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\027b512837fad2dd8c2a61e41f3e3aef\jetified-XUI-1.1.7\AndroidManifest.xml:18:13-56
+655        <activity
+655-->[com.github.xuexiangjys:XUI:1.1.7] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\027b512837fad2dd8c2a61e41f3e3aef\jetified-XUI-1.1.7\AndroidManifest.xml:19:9-21:59
+656            android:name="com.xuexiang.xui.widget.imageview.preview.ui.VideoPlayerActivity"
+656-->[com.github.xuexiangjys:XUI:1.1.7] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\027b512837fad2dd8c2a61e41f3e3aef\jetified-XUI-1.1.7\AndroidManifest.xml:20:13-92
+657            android:theme="@style/XUITheme.Translucent" />
+657-->[com.github.xuexiangjys:XUI:1.1.7] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\027b512837fad2dd8c2a61e41f3e3aef\jetified-XUI-1.1.7\AndroidManifest.xml:21:13-56
+658        <activity android:name="com.zhihu.matisse.ui.MatisseActivity" />
+658-->[com.zhihu.android:matisse:0.5.3-beta3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\5cde80f3e6d75cb2905376dd3573036f\jetified-matisse-0.5.3-beta3\AndroidManifest.xml:28:9-73
+658-->[com.zhihu.android:matisse:0.5.3-beta3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\5cde80f3e6d75cb2905376dd3573036f\jetified-matisse-0.5.3-beta3\AndroidManifest.xml:28:19-70
+659        <activity android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity" />
+659-->[com.zhihu.android:matisse:0.5.3-beta3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\5cde80f3e6d75cb2905376dd3573036f\jetified-matisse-0.5.3-beta3\AndroidManifest.xml:29:9-87
+659-->[com.zhihu.android:matisse:0.5.3-beta3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\5cde80f3e6d75cb2905376dd3573036f\jetified-matisse-0.5.3-beta3\AndroidManifest.xml:29:19-84
+660        <activity android:name="com.zhihu.matisse.internal.ui.SelectedPreviewActivity" />
+660-->[com.zhihu.android:matisse:0.5.3-beta3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\5cde80f3e6d75cb2905376dd3573036f\jetified-matisse-0.5.3-beta3\AndroidManifest.xml:30:9-90
+660-->[com.zhihu.android:matisse:0.5.3-beta3] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\5cde80f3e6d75cb2905376dd3573036f\jetified-matisse-0.5.3-beta3\AndroidManifest.xml:30:19-87
+661
+662        <uses-library
+662-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:23:9-25:40
+663            android:name="org.apache.http.legacy"
+663-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:24:13-50
+664            android:required="false" />
+664-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:25:13-37
+665
+666        <activity
+666-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:27:9-31:20
+667            android:name="com.alipay.sdk.app.H5PayActivity"
+667-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:28:13-60
+668            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+668-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:29:13-85
+669            android:exported="false" >
+669-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:30:13-37
+670        </activity>
+671        <activity
+671-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:32:9-36:20
+672            android:name="com.alipay.sdk.app.H5AuthActivity"
+672-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:33:13-61
+673            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+673-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:34:13-85
+674            android:exported="false" >
+674-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:35:13-37
+675        </activity>
+676        <activity
+676-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:37:9-46:20
+677            android:name="com.alipay.sdk.app.PayResultActivity"
+677-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:38:13-64
+678            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+678-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:39:13-85
+679            android:exported="true"
+679-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:40:13-36
+680            android:launchMode="singleInstance"
+680-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:41:13-48
+681            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+681-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:42:13-72
+682            <intent-filter>
+682-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:43:13-45:29
+683                <category android:name="android.intent.category.DEFAULT" />
+683-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:44:17-76
+683-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:44:27-73
+684            </intent-filter>
+685        </activity>
+686        <activity
+686-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:47:9-52:20
+687            android:name="com.alipay.sdk.app.AlipayResultActivity"
+687-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:48:13-67
+688            android:exported="true"
+688-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:49:13-36
+689            android:launchMode="singleTask"
+689-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:50:13-44
+690            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+690-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:51:13-72
+691        </activity>
+692        <activity
+692-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:53:9-59:20
+693            android:name="com.alipay.sdk.app.H5OpenAuthActivity"
+693-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:54:13-65
+694            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+694-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:55:13-85
+695            android:exported="false"
+695-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:56:13-37
+696            android:screenOrientation="behind"
+696-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:57:13-47
+697            android:windowSoftInputMode="adjustResize|stateHidden" >
+697-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:58:13-67
+698        </activity>
+699
+700        <provider
+700-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:17:9-25:20
+701            android:name="com.lwkandroid.imagepicker.utils.IPCacheProvider"
+701-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:18:13-76
+702            android:authorities="com.ctgoe.app.dingding_c.provider"
+702-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:19:13-62
+703            android:exported="false"
+703-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:20:13-37
+704            android:grantUriPermissions="true" >
+704-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:21:13-47
+705            <meta-data
+705-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:459:13-462:49
+706                android:name="android.support.FILE_PROVIDER_PATHS"
+706-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:460:17-67
+707                android:resource="@xml/ip_cache_path" />
+707-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:461:17-51
+708        </provider>
+709        <provider
+709-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:26:9-34:20
+710            android:name="com.lwkandroid.imagepicker.utils.IPExCacheProvider"
+710-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:27:13-78
+711            android:authorities="com.ctgoe.app.dingding_ex_c.provider"
+711-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:28:13-65
+712            android:exported="false"
+712-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:29:13-37
+713            android:grantUriPermissions="true" >
+713-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:30:13-47
+714            <meta-data
+714-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:459:13-462:49
+715                android:name="android.support.FILE_PROVIDER_PATHS"
+715-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:460:17-67
+716                android:resource="@xml/ip_external_cache_path" />
+716-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:461:17-51
+717        </provider>
+718        <provider
+718-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:35:9-43:20
+719            android:name="com.lwkandroid.imagepicker.utils.IPExFilesProvider"
+719-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:36:13-78
+720            android:authorities="com.ctgoe.app.dingding_ex_f.provider"
+720-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:37:13-65
+721            android:exported="false"
+721-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:38:13-37
+722            android:grantUriPermissions="true" >
+722-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:39:13-47
+723            <meta-data
+723-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:459:13-462:49
+724                android:name="android.support.FILE_PROVIDER_PATHS"
+724-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:460:17-67
+725                android:resource="@xml/ip_external_files_path" />
+725-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:461:17-51
+726        </provider>
+727        <provider
+727-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:44:9-52:20
+728            android:name="com.lwkandroid.imagepicker.utils.IPExProvider"
+728-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:45:13-73
+729            android:authorities="com.ctgoe.app.dingding_ex.provider"
+729-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:46:13-63
+730            android:exported="false"
+730-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:47:13-37
+731            android:grantUriPermissions="true" >
+731-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:48:13-47
+732            <meta-data
+732-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:459:13-462:49
+733                android:name="android.support.FILE_PROVIDER_PATHS"
+733-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:460:17-67
+734                android:resource="@xml/ip_external_path" />
+734-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:461:17-51
+735        </provider>
+736        <provider
+736-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:53:9-61:20
+737            android:name="com.lwkandroid.imagepicker.utils.IPFilesProvider"
+737-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:54:13-76
+738            android:authorities="com.ctgoe.app.dingding_f.provider"
+738-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:55:13-62
+739            android:exported="false"
+739-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:56:13-37
+740            android:grantUriPermissions="true" >
+740-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:57:13-47
+741            <meta-data
+741-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:459:13-462:49
+742                android:name="android.support.FILE_PROVIDER_PATHS"
+742-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:460:17-67
+743                android:resource="@xml/ip_files_path" />
+743-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:461:17-51
+744        </provider>
+745
+746        <activity
+746-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:63:9-67:20
+747            android:name="com.lwkandroid.imagepicker.ui.grid.view.ImageDataActivity"
+747-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:64:13-85
+748            android:configChanges="orientation|keyboardHidden|screenSize"
+748-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:65:13-74
+749            android:windowSoftInputMode="adjustResize" >
+749-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:66:13-55
+750        </activity>
+751        <activity
+751-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:68:9-72:20
+752            android:name="com.lwkandroid.imagepicker.ui.pager.view.ImagePagerActivity"
+752-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:69:13-87
+753            android:configChanges="orientation|keyboardHidden|screenSize"
+753-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:70:13-74
+754            android:windowSoftInputMode="adjustResize" >
+754-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:71:13-55
+755        </activity>
+756        <activity
+756-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:73:9-77:20
+757            android:name="com.lwkandroid.imagepicker.ui.crop.ImageCropActivity"
+757-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:74:13-80
+758            android:configChanges="orientation|keyboardHidden|screenSize"
+758-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:75:13-74
+759            android:windowSoftInputMode="adjustResize" >
+759-->[com.lwkandroid:ImagePicker:1.4.4] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\217c2a28d51e1360bad70945c4ac2214\jetified-ImagePicker-1.4.4\AndroidManifest.xml:76:13-55
+760        </activity>
+761        <activity
+761-->[com.github.yuzhiqiang1993:zxing:2.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\db7bf6fb2511d2e6de9aed67db842b77\jetified-zxing-2.2.8\AndroidManifest.xml:23:9-28:67
+762            android:name="com.yzq.zxinglibrary.android.CaptureActivity"
+762-->[com.github.yuzhiqiang1993:zxing:2.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\db7bf6fb2511d2e6de9aed67db842b77\jetified-zxing-2.2.8\AndroidManifest.xml:24:13-72
+763            android:configChanges="orientation|screenSize"
+763-->[com.github.yuzhiqiang1993:zxing:2.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\db7bf6fb2511d2e6de9aed67db842b77\jetified-zxing-2.2.8\AndroidManifest.xml:25:13-59
+764            android:screenOrientation="portrait"
+764-->[com.github.yuzhiqiang1993:zxing:2.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\db7bf6fb2511d2e6de9aed67db842b77\jetified-zxing-2.2.8\AndroidManifest.xml:26:13-49
+765            android:theme="@style/Theme.AppCompat.NoActionBar"
+765-->[com.github.yuzhiqiang1993:zxing:2.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\db7bf6fb2511d2e6de9aed67db842b77\jetified-zxing-2.2.8\AndroidManifest.xml:27:13-63
+766            android:windowSoftInputMode="adjustPan|stateHidden" />
+766-->[com.github.yuzhiqiang1993:zxing:2.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\db7bf6fb2511d2e6de9aed67db842b77\jetified-zxing-2.2.8\AndroidManifest.xml:28:13-64
+767
+768        <service
+768-->[androidx.room:room-runtime:2.3.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\a221bba4d9e8a9a83faf06f0706c7c22\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+769            android:name="androidx.room.MultiInstanceInvalidationService"
+769-->[androidx.room:room-runtime:2.3.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\a221bba4d9e8a9a83faf06f0706c7c22\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+770            android:directBootAware="true"
+770-->[androidx.room:room-runtime:2.3.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\a221bba4d9e8a9a83faf06f0706c7c22\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+771            android:exported="false" /> <!-- Rich push 核心功能 since 2.0.6 -->
+771-->[androidx.room:room-runtime:2.3.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\a221bba4d9e8a9a83faf06f0706c7c22\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+772        <activity
+772-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:51:9-62:20
+773            android:name="cn.jpush.android.ui.PopWinActivity"
+773-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:52:13-62
+774            android:exported="true"
+774-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:53:13-36
+775            android:theme="@style/MyDialogStyle" >
+775-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:54:13-49
+776            <intent-filter>
+776-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:55:13-61:29
+777                <category android:name="android.intent.category.DEFAULT" />
+777-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:44:17-76
+777-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:44:27-73
+778
+779                <action android:name="cn.jpush.android.ui.PopWinActivity" />
+779-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:58:17-77
+779-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:58:25-74
+780
+781                <category android:name="com.ctgoe.app.dingding" />
+781-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:449:27-58
+782            </intent-filter>
+783        </activity> <!-- Required SDK核心功能 -->
+784        <activity
+784-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:65:9-76:20
+785            android:name="cn.jpush.android.ui.PushActivity"
+785-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:66:13-60
+786            android:configChanges="orientation|keyboardHidden"
+786-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:67:13-63
+787            android:exported="true"
+787-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:68:13-36
+788            android:theme="@android:style/Theme.NoTitleBar" >
+788-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:69:13-60
+789            <intent-filter>
+789-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:70:13-75:29
+790                <action android:name="cn.jpush.android.ui.PushActivity" />
+790-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:71:17-75
+790-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:71:25-72
+791
+792                <category android:name="android.intent.category.DEFAULT" />
+792-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:44:17-76
+792-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:44:27-73
+793                <category android:name="com.ctgoe.app.dingding" />
+793-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:449:27-58
+794            </intent-filter>
+795        </activity> <!-- Required SDK 核心功能 -->
+796        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+797        <service
+797-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:79:9-90:19
+798            android:name="cn.jpush.android.service.PushService"
+798-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:80:13-64
+799            android:enabled="true"
+799-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:81:13-35
+800            android:exported="false"
+800-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:82:13-37
+801            android:process=":pushcore" >
+801-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:83:13-40
+802            <intent-filter>
+802-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:84:13-89:29
+803                <action android:name="cn.jpush.android.intent.REGISTER" />
+803-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:85:17-75
+803-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:85:25-72
+804                <action android:name="cn.jpush.android.intent.REPORT" />
+804-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:86:17-73
+804-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:86:25-70
+805                <action android:name="cn.jpush.android.intent.PushService" />
+805-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:87:17-78
+805-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:87:25-75
+806                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+806-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:88:17-76
+806-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:88:25-73
+807            </intent-filter>
+808        </service> <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+809        <!-- 若不启用该功能可删除该组件，或把 enabled 设置成 false ；App 不会被其他 App 拉起，但会拉起其他的 App。 -->
+810        <!-- jcore2.4.2 App的被拉起不依赖于该组件 -->
+811        <service
+811-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:95:9-104:19
+812            android:name="cn.jpush.android.service.DaemonService"
+812-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:96:13-66
+813            android:enabled="true"
+813-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:97:13-35
+814            android:exported="true" >
+814-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:98:13-36
+815            <intent-filter>
+815-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:99:13-103:29
+816                <action android:name="cn.jpush.android.intent.DaemonService" />
+816-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:100:17-80
+816-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:100:25-77
+817
+818                <category android:name="com.ctgoe.app.dingding" />
+818-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:449:27-58
+819            </intent-filter>
+820        </service> <!-- 可选，如果使用静态Activity方式拉起，该组件必须声明 -->
+821        <activity
+821-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:106:9-117:20
+822            android:name="cn.jpush.android.service.DActivity"
+822-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:107:13-62
+823            android:enabled="true"
+823-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:108:13-35
+824            android:exported="true"
+824-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:109:13-36
+825            android:taskAffinity="jpush.custom"
+825-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:110:13-48
+826            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+826-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:111:13-72
+827            <intent-filter>
+827-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:112:13-116:29
+828                <action android:name="cn.jpush.android.intent.DActivity" />
+828-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:113:17-76
+828-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:113:25-73
+829
+830                <category android:name="com.ctgoe.app.dingding" />
+830-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:449:27-58
+831            </intent-filter>
+832        </activity> <!-- Required SDK核心功能 -->
+833        <receiver
+833-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:120:9-139:20
+834            android:name="cn.jpush.android.service.PushReceiver"
+834-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:121:13-65
+835            android:enabled="true"
+835-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:122:13-35
+836            android:exported="true" >
+836-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:123:13-36
+837            <intent-filter android:priority="1000" >
+837-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:124:13-127:29
+837-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:124:28-51
+838                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+838-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:125:17-94
+838-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:125:25-91
+839                <category android:name="com.ctgoe.app.dingding" />
+839-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:449:27-58
+840            </intent-filter>
+841            <intent-filter>
+841-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:128:13-131:29
+842                <action android:name="android.intent.action.USER_PRESENT" />
+842-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:129:17-77
+842-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:129:25-74
+843                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+843-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:130:17-79
+843-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:130:25-76
+844            </intent-filter>
+845            <!-- Optional -->
+846            <intent-filter>
+846-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:133:13-138:29
+847                <action android:name="android.intent.action.PACKAGE_ADDED" />
+847-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:134:17-78
+847-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:134:25-75
+848                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+848-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:135:17-80
+848-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:135:25-77
+849
+850                <data android:scheme="package" />
+850-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:137:17-50
+850-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:137:23-47
+851            </intent-filter>
+852        </receiver> <!-- Required SDK核心功能 -->
+853        <receiver
+853-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:142:9-144:40
+854            android:name="cn.jpush.android.service.AlarmReceiver"
+854-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:143:13-66
+855            android:exported="false" /> <!-- since 3.5.0 Required SDK 核心功能 -->
+855-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:144:13-37
+856        <!-- 3.5.0新增，用于定时展示功能 -->
+857        <receiver
+857-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:148:9-150:40
+858            android:name="cn.jpush.android.service.SchedulerReceiver"
+858-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:149:13-70
+859            android:exported="false" /> <!-- since 3.0.9 Required SDK 核心功能 -->
+859-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:150:13-37
+860        <provider
+860-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:153:9-157:43
+861            android:name="cn.jpush.android.service.DataProvider"
+861-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:154:13-65
+862            android:authorities="com.ctgoe.app.dingding.DataProvider"
+862-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:155:13-64
+863            android:exported="false"
+863-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:156:13-37
+864            android:process=":pushcore" /> <!-- since 3.1.0 Required SDK 核心功能 -->
+864-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:157:13-40
+865        <provider
+865-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:159:9-162:39
+866            android:name="cn.jpush.android.service.DownloadProvider"
+866-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:160:13-69
+867            android:authorities="com.ctgoe.app.dingding.DownloadProvider"
+867-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:161:13-68
+868            android:exported="true" /> <!-- since 3.3.0 Required SDK核心功能 -->
+868-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:162:13-36
+869        <activity
+869-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:165:9-176:20
+870            android:name="cn.jpush.android.service.JNotifyActivity"
+870-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:166:13-68
+871            android:exported="true"
+871-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:167:13-36
+872            android:taskAffinity="jpush.custom"
+872-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:168:13-48
+873            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+873-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:169:13-72
+874            <intent-filter>
+874-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:170:13-175:29
+875                <action android:name="cn.jpush.android.intent.JNotifyActivity" />
+875-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:171:17-82
+875-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:171:25-79
+876
+877                <category android:name="android.intent.category.DEFAULT" />
+877-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:44:17-76
+877-->[:alipaySdk-15.7.9-20200727142846:] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3bbb2eadcabc66ccba6e124e0360614b\jetified-alipaySdk-15.7.9-20200727142846\AndroidManifest.xml:44:27-73
+878                <category android:name="com.ctgoe.app.dingding" />
+878-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\app\src\main\AndroidManifest.xml:449:27-58
+879            </intent-filter>
+880        </activity> <!-- since 3.5.6 新增华硕通道 -->
+881        <receiver android:name="cn.jpush.android.asus.AsusPushMessageReceiver" /> <!-- Required  . Enable it you can get statistics data with channel -->
+881-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:178:9-82
+881-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:178:19-79
+882        <meta-data
+882-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:180:9-182:48
+883            android:name="JPUSH_CHANNEL"
+883-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:181:13-41
+884            android:value="developer-default" />
+884-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:182:13-45
+885        <meta-data
+885-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:183:9-185:47
+886            android:name="JPUSH_APPKEY"
+886-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:184:13-40
+887            android:value="90be10cec0f6070dc00f7f87" />
+887-->[cn.jiguang.sdk:jpush:4.2.8] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\f89bf1e8e8d5b195ccd8351d07341324\jetified-jpush-4.2.8\AndroidManifest.xml:185:13-44
+888        <meta-data
+888-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3d83d707dd48bb2f72866d3455e03ba6\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+889            android:name="com.google.android.gms.version"
+889-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3d83d707dd48bb2f72866d3455e03ba6\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+890            android:value="@integer/google_play_services_version" />
+890-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\3d83d707dd48bb2f72866d3455e03ba6\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+891
+892        <provider
+892-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\93dba3dab69cd8c4372dc6d6d64e9651\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+893            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+893-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\93dba3dab69cd8c4372dc6d6d64e9651\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+894            android:authorities="com.ctgoe.app.dingding.lifecycle-process"
+894-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\93dba3dab69cd8c4372dc6d6d64e9651\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+895            android:exported="false"
+895-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\93dba3dab69cd8c4372dc6d6d64e9651\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+896            android:multiprocess="true" />
+896-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\YL\.gradle\caches\transforms-2\files-2.1\93dba3dab69cd8c4372dc6d6d64e9651\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+897    </application>
+898
+899</manifest>

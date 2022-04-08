@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_btn_common">
+
+
+    <TextView
+        android:id="@+id/mTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingHorizontal="12dp"
+        android:singleLine="true"
+        android:text="小黄汽修"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/mImageView"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="8dp"
+        android:src="@drawable/icon_close_red" />
+
+</RelativeLayout>

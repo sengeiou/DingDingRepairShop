@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/white"
+    android:paddingHorizontal="12dp"
+    android:id="@+id/mParentRL"
+    android:paddingVertical="8dp">
+
+    <ImageView
+        android:id="@+id/mImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/df" />
+
+    <TextView
+        android:singleLine="true"
+        android:textSize="12sp"
+        android:id="@+id/mCarInfoTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_toEndOf="@id/mImageView"
+        android:text="宝马 320i 2010 2.0 手自一体" />
+
+    <TextView
+        android:id="@+id/mVinCodeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mCarInfoTV"
+        android:layout_toEndOf="@id/mImageView"
+        android:text="EEEEEEEEEEEEEEEEE"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/mTimeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mCarInfoTV"
+        android:layout_alignParentEnd="true"
+        android:text="20年3月"
+        android:textSize="12sp" />
+</RelativeLayout>
+

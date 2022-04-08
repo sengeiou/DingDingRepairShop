@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparency"
+    tools:context=".activity.mine.JumpToGzhDialogActivity">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_border_gray_solid_white_radius3"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/mCloseIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:padding="3dp"
+            android:src="@drawable/ic_baseline_close_24" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/mViewPage"
+            android:layout_width="200dp"
+            android:layout_height="260dp"
+            android:overScrollMode="never" />
+
+        <LinearLayout
+            android:id="@+id/ll_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/mPoint1"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/point2" />
+
+            <ImageView
+                android:id="@+id/mPoint2"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/point1" />
+
+            <ImageView
+                android:id="@+id/mPoint3"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/point1" />
+
+            <ImageView
+                android:id="@+id/mPoint4"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/point1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:text="关注公众号，车同轨运营"
+            android:textColor="@color/black_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="第一步  打开微信 点击服务通知" />
+
+        <Button
+            android:id="@+id/mWeChatBTN"
+            style="@style/CommonButton"
+            android:layout_width="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="调起微信"
+            android:textColor="@color/white" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</RelativeLayout>

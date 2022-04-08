@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="CustomTitleBar">
+        <attr name="mWhiteStyle" format="boolean" />
+        <attr name="mTitle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SelectButton">
+        <attr name="mText" format="string" />
+        <attr name="mSelect" format="boolean" />
+        <attr name="mColor" format="color"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="CommonHorizontalLayout">
+        <attr name="mStartTV" format="string" />
+        <attr name="mEndTV" format="string" />
+        <attr name="mTextSize" format="dimension"/>
+        <attr name="mMaxLines" format="integer"/>
+    </declare-styleable>
+
+    <!--引导页展示的图片-->
+    <array name="Guide_image">
+        <item>@drawable/guide_one</item>
+        <item>@drawable/guide_two</item>
+        <item>@drawable/guide_three</item>
+        <item>@drawable/guide_four</item>
+    </array>
+
+
+    <array name="Guide_GZH_image">
+        <item>@drawable/img_gzh_one</item>
+        <item>@drawable/img_gzh_two</item>
+        <item>@drawable/img_gzh_three</item>
+        <item>@drawable/img_gzh_four</item>
+    </array>
+</resources>

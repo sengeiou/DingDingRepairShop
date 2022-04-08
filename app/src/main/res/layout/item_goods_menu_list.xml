@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mTextLL"
+    android:layout_width="match_parent"
+    android:layout_height="39dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/mTextLine"
+        android:layout_width="3dp"
+        android:layout_height="20dp"
+        android:background="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/mTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lines="1"
+        android:textSize="12sp"
+        android:ellipsize="end"
+        android:text="赛福特"
+        android:textColor="@color/colorAccent" />
+</LinearLayout>

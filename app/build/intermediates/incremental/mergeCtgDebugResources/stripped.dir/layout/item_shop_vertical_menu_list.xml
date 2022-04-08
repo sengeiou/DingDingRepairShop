@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mParentLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mNameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="8dp"
+        android:layout_toStartOf="@id/mSelectIV"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="倍耐力"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/mSelectIV"
+        android:layout_width="11dp"
+        android:layout_height="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="11dp"
+        android:paddingTop="2dp"
+        android:src="@drawable/icon_select" />
+
+    <View
+        android:id="@+id/mLine"
+        style="@style/GrayLine"
+        android:layout_below="@id/mNameTV"
+        android:layout_marginHorizontal="8dp" />
+</RelativeLayout>

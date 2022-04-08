@@ -1,0 +1,36 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="me.minetsh.imaging" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="21"
+6-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="29" />
+7-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\src\main\AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+9-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\src\main\AndroidManifest.xml:4:5-80
+9-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\src\main\AndroidManifest.xml:4:22-77
+10    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+10-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\src\main\AndroidManifest.xml:5:5-81
+10-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\src\main\AndroidManifest.xml:5:22-78
+11
+12    <application>
+12-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\src\main\AndroidManifest.xml:7:5-18:19
+13        <activity
+13-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\src\main\AndroidManifest.xml:9:9-11:56
+14            android:name="me.minetsh.imaging.IMGGalleryActivity"
+14-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\src\main\AndroidManifest.xml:10:13-65
+15            android:theme="@style/ImageGalleryTheme" />
+15-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\src\main\AndroidManifest.xml:11:13-53
+16        <activity
+16-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\src\main\AndroidManifest.xml:13:9-16:63
+17            android:name="me.minetsh.imaging.IMGEditActivity"
+17-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\src\main\AndroidManifest.xml:14:13-62
+18            android:theme="@style/ImageEditTheme"
+18-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\src\main\AndroidManifest.xml:15:13-50
+19            android:windowSoftInputMode="stateAlwaysHidden" />
+19-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\image\src\main\AndroidManifest.xml:16:13-60
+20    </application>
+21
+22</manifest>

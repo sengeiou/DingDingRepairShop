@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page"
+    android:orientation="vertical"
+    tools:context=".activity.home.enquiry.BatchAddPartSelectMoreActivity">
+
+    <com.android.ctgapp.widget.CustomTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        app:mTitle="添加配件" />
+
+    <RelativeLayout
+        android:id="@+id/mParentRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white"
+        android:paddingVertical="12dp">
+
+        <CheckBox
+            android:id="@+id/mCheckBox"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleX="0.7"
+            android:scaleY="0.7" />
+
+        <ImageView
+            android:id="@+id/mPartIV"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="0dp"
+            android:layout_toEndOf="@id/mCheckBox"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_unknow_select_me" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/mPartIV"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:id="@+id/mTopTextTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不懂咋选? 就选我"
+                android:textColor="@color/black_text"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mTopTextTV"
+                android:layout_marginTop="15dp"
+                android:text="选择错误的OE会导致配件无法正确安装"
+                android:textSize="10sp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mPartRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/mConfirmBTN"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bg_btn_common"
+            android:text="保存"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

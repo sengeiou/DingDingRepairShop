@@ -1,0 +1,5 @@
+include ':mp3record'
+include ':app'
+rootProject.name = "CTGapp"
+include ':VinLibrary'
+include ':image'

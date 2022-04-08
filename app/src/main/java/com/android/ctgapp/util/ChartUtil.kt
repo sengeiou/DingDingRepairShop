@@ -1,0 +1,222 @@
+package com.android.ctgapp.util
+
+import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.Matrix
+import android.text.Spannable
+import android.text.SpannableString
+import android.widget.EditText
+import com.android.ctgapp.R
+import com.android.ctgapp.entity.chart.ChartFaceBean
+import com.android.ctgapp.widget.chart.CenteredImageSpan
+
+object ChartUtil {
+    fun handlerFaceSelect(context: Context, resourceID: Int, resourceName: String, editText: EditText) {
+        val bitmap = BitmapFactory.decodeResource(context.resources, resourceID)
+        val spannableString = SpannableString(resourceName)
+        val imageSpan = CenteredImageSpan(context, imageScale(bitmap, 18f.toPx(context), 18f.toPx(context)))
+        spannableString.setSpan(imageSpan, 0, resourceName.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        editText.append(spannableString)
+    }
+
+
+     fun imageScale(bitmap: Bitmap, dst_w: Int, dst_h: Int): Bitmap {
+        val srcW: Int = bitmap.width
+        val srcH: Int = bitmap.height
+        val scaleW = dst_w.toFloat() / srcW
+        val scaleH = dst_h.toFloat() / srcH
+        val matrix = Matrix()
+        matrix.postScale(scaleW, scaleH)
+        return Bitmap.createBitmap(
+            bitmap, 0, 0, srcW, srcH, matrix,
+            true
+        )
+    }
+
+    val faceList = arrayOf(
+        ChartFaceBean(R.drawable.emoji_1, "[微笑]"),
+        ChartFaceBean(R.drawable.emoji_2, "[撇嘴]"),
+        ChartFaceBean(R.drawable.emoji_3, "[色]"),
+        ChartFaceBean(R.drawable.emoji_4, "[发呆]"),
+        ChartFaceBean(R.drawable.emoji_5, "[得意]"),
+        ChartFaceBean(R.drawable.emoji_6, "[流泪]"),
+        ChartFaceBean(R.drawable.emoji_7, "[害羞]"),
+        ChartFaceBean(R.drawable.emoji_8, "[闭嘴]"),
+        ChartFaceBean(R.drawable.emoji_9, "[睡]"),
+        ChartFaceBean(R.drawable.emoji_10, "[大哭]"),
+        ChartFaceBean(R.drawable.emoji_11, "[尴尬]"),
+        ChartFaceBean(R.drawable.emoji_12, "[发怒]"),
+        ChartFaceBean(R.drawable.emoji_13, "[调皮]"),
+        ChartFaceBean(R.drawable.emoji_14, "[龇牙]"),
+        ChartFaceBean(R.drawable.emoji_15, "[惊讶]"),
+        ChartFaceBean(R.drawable.emoji_16, "[难过]"),
+        ChartFaceBean(R.drawable.emoji_17, "[酷]"),
+        ChartFaceBean(R.drawable.emoji_18, "[冷汗]"),
+        ChartFaceBean(R.drawable.emoji_19, "[抓狂]"),
+        ChartFaceBean(R.drawable.emoji_20, "[吐]"),
+        ChartFaceBean(R.drawable.emoji_21, "[偷笑]"),
+        ChartFaceBean(R.drawable.emoji_22, "[可爱]"),
+        ChartFaceBean(R.drawable.emoji_23, "[白眼]"),
+        ChartFaceBean(R.drawable.emoji_24, "[傲慢]"),
+        ChartFaceBean(R.drawable.emoji_25, "[饥饿]"),
+        ChartFaceBean(R.drawable.emoji_26, "[困]"),
+        ChartFaceBean(R.drawable.emoji_27, "[惊恐]"),
+        ChartFaceBean(R.drawable.emoji_28, "[流汗]"),
+        ChartFaceBean(R.drawable.emoji_29, "[憨笑]"),
+        ChartFaceBean(R.drawable.emoji_30, "[大兵]"),
+        ChartFaceBean(R.drawable.emoji_31, "[奋斗]"),
+        ChartFaceBean(R.drawable.emoji_32, "[咒骂]"),
+        ChartFaceBean(R.drawable.emoji_33, "[疑问]"),
+        ChartFaceBean(R.drawable.emoji_34, "[嘘]"),
+        ChartFaceBean(R.drawable.emoji_35, "[晕]"),
+        ChartFaceBean(R.drawable.emoji_36, "[折磨]"),
+        ChartFaceBean(R.drawable.emoji_37, "[衰]"),
+        ChartFaceBean(R.drawable.emoji_38, "[骷髅]"),
+        ChartFaceBean(R.drawable.emoji_39, "[敲打]"),
+        ChartFaceBean(R.drawable.emoji_40, "[再见]"),
+        ChartFaceBean(R.drawable.emoji_41, "[擦汗]"),
+        ChartFaceBean(R.drawable.emoji_42, "[抠鼻]"),
+        ChartFaceBean(R.drawable.emoji_43, "[鼓掌]"),
+        ChartFaceBean(R.drawable.emoji_44, "[糗大了"),
+        ChartFaceBean(R.drawable.emoji_45, "[坏笑]"),
+        ChartFaceBean(R.drawable.emoji_46, "[左哼哼"),
+        ChartFaceBean(R.drawable.emoji_47, "[右哼哼"),
+        ChartFaceBean(R.drawable.emoji_48, "[哈欠]"),
+        ChartFaceBean(R.drawable.emoji_49, "[鄙视]"),
+        ChartFaceBean(R.drawable.emoji_50, "[委屈]"),
+        ChartFaceBean(R.drawable.emoji_51, "[快哭了"),
+        ChartFaceBean(R.drawable.emoji_52, "[阴险]"),
+        ChartFaceBean(R.drawable.emoji_53, "[亲亲]"),
+        ChartFaceBean(R.drawable.emoji_54, "[吓]"),
+        ChartFaceBean(R.drawable.emoji_55, "[可怜]"),
+        ChartFaceBean(R.drawable.emoji_56, "[菜刀]"),
+        ChartFaceBean(R.drawable.emoji_57, "[西瓜]"),
+        ChartFaceBean(R.drawable.emoji_58, "[啤酒]"),
+        ChartFaceBean(R.drawable.emoji_59, "[篮球]"),
+        ChartFaceBean(R.drawable.emoji_60, "[乒乓]"),
+        ChartFaceBean(R.drawable.emoji_61, "[咖啡]"),
+        ChartFaceBean(R.drawable.emoji_62, "[饭]"),
+        ChartFaceBean(R.drawable.emoji_63, "[猪头]"),
+        ChartFaceBean(R.drawable.emoji_64, "[玫瑰]"),
+        ChartFaceBean(R.drawable.emoji_65, "[凋谢]"),
+        ChartFaceBean(R.drawable.emoji_66, "[示爱]"),
+        ChartFaceBean(R.drawable.emoji_67, "[爱心]"),
+        ChartFaceBean(R.drawable.emoji_68, "[心碎]"),
+        ChartFaceBean(R.drawable.emoji_69, "[蛋糕]"),
+        ChartFaceBean(R.drawable.emoji_70, "[闪电]"),
+        ChartFaceBean(R.drawable.emoji_71, "[炸弹]"),
+        ChartFaceBean(R.drawable.emoji_72, "[刀]"),
+        ChartFaceBean(R.drawable.emoji_73, "[足球]"),
+        ChartFaceBean(R.drawable.emoji_74, "[瓢虫]"),
+        ChartFaceBean(R.drawable.emoji_75, "[便便]"),
+        ChartFaceBean(R.drawable.emoji_76, "[月亮]"),
+        ChartFaceBean(R.drawable.emoji_77, "[太阳]"),
+        ChartFaceBean(R.drawable.emoji_78, "[礼物]"),
+        ChartFaceBean(R.drawable.emoji_79, "[拥抱]"),
+        ChartFaceBean(R.drawable.emoji_80, "[强]"),
+        ChartFaceBean(R.drawable.emoji_81, "[弱]"),
+        ChartFaceBean(R.drawable.emoji_82, "[握手]"),
+        ChartFaceBean(R.drawable.emoji_83, "[胜利]"),
+        ChartFaceBean(R.drawable.emoji_84, "[抱拳]"),
+        ChartFaceBean(R.drawable.emoji_85, "[勾引]"),
+        ChartFaceBean(R.drawable.emoji_86, "[拳头]"),
+        ChartFaceBean(R.drawable.emoji_87, "[差劲]"),
+        ChartFaceBean(R.drawable.emoji_88, "[爱你]"),
+        ChartFaceBean(R.drawable.emoji_89, "[NO]"),
+        ChartFaceBean(R.drawable.emoji_90, "[OK]")
+    )
+    val chartMap = hashMapOf(
+        "[微笑]" to R.drawable.emoji_1,
+        "[撇嘴]" to R.drawable.emoji_2,
+        "[色]" to R.drawable.emoji_3,
+        "[发呆]" to R.drawable.emoji_4,
+        "[得意]" to R.drawable.emoji_5,
+        "[流泪]" to R.drawable.emoji_6,
+        "[害羞]" to R.drawable.emoji_7,
+        "[闭嘴]" to R.drawable.emoji_8,
+        "[睡]" to R.drawable.emoji_9,
+        "[大哭]" to R.drawable.emoji_10,
+        "[尴尬]" to R.drawable.emoji_11,
+        "[发怒]" to R.drawable.emoji_12,
+        "[调皮]" to R.drawable.emoji_13,
+        "[龇牙]" to R.drawable.emoji_14,
+        "[惊讶]" to R.drawable.emoji_15,
+        "[难过]" to R.drawable.emoji_16,
+        "[酷]" to R.drawable.emoji_17,
+        "[冷汗]" to R.drawable.emoji_18,
+        "[抓狂]" to R.drawable.emoji_19,
+        "[吐]" to R.drawable.emoji_20,
+        "[偷笑]" to R.drawable.emoji_21,
+        "[可爱]" to R.drawable.emoji_22,
+        "[白眼]" to R.drawable.emoji_23,
+        "[傲慢]" to R.drawable.emoji_24,
+        "[饥饿]" to R.drawable.emoji_25,
+        "[困]" to R.drawable.emoji_26,
+        "[惊恐]" to R.drawable.emoji_27,
+        "[流汗]" to R.drawable.emoji_28,
+        "[憨笑]" to R.drawable.emoji_29,
+        "[大兵]" to R.drawable.emoji_30,
+        "[奋斗]" to R.drawable.emoji_31,
+        "[咒骂]" to R.drawable.emoji_32,
+        "[疑问]" to R.drawable.emoji_33,
+        "[嘘]" to R.drawable.emoji_34,
+        "[晕]" to R.drawable.emoji_35,
+        "[折磨]" to R.drawable.emoji_36,
+        "[衰]" to R.drawable.emoji_37,
+        "[骷髅]" to R.drawable.emoji_38,
+        "[敲打]" to R.drawable.emoji_39,
+        "[再见]" to R.drawable.emoji_40,
+        "[擦汗]" to R.drawable.emoji_41,
+        "[抠鼻]" to R.drawable.emoji_42,
+        "[鼓掌]" to R.drawable.emoji_43,
+        "[糗大了" to R.drawable.emoji_44,
+        "[坏笑]" to R.drawable.emoji_45,
+        "[左哼哼" to R.drawable.emoji_46,
+        "[右哼哼" to R.drawable.emoji_47,
+        "[哈欠]" to R.drawable.emoji_48,
+        "[鄙视]" to R.drawable.emoji_49,
+        "[委屈]" to R.drawable.emoji_50,
+        "[快哭了" to R.drawable.emoji_51,
+        "[阴险]" to R.drawable.emoji_52,
+        "[亲亲]" to R.drawable.emoji_53,
+        "[吓]" to R.drawable.emoji_54,
+        "[可怜]" to R.drawable.emoji_55,
+        "[菜刀]" to R.drawable.emoji_56,
+        "[西瓜]" to R.drawable.emoji_57,
+        "[啤酒]" to R.drawable.emoji_58,
+        "[篮球]" to R.drawable.emoji_59,
+        "[乒乓]" to R.drawable.emoji_60,
+        "[咖啡]" to R.drawable.emoji_61,
+        "[饭]" to R.drawable.emoji_62,
+        "[猪头]" to R.drawable.emoji_63,
+        "[玫瑰]" to R.drawable.emoji_64,
+        "[凋谢]" to R.drawable.emoji_65,
+        "[示爱]" to R.drawable.emoji_66,
+        "[爱心]" to R.drawable.emoji_67,
+        "[心碎]" to R.drawable.emoji_68,
+        "[蛋糕]" to R.drawable.emoji_69,
+        "[闪电]" to R.drawable.emoji_70,
+        "[炸弹]" to R.drawable.emoji_71,
+        "[刀]" to R.drawable.emoji_72,
+        "[足球]" to R.drawable.emoji_73,
+        "[瓢虫]" to R.drawable.emoji_74,
+        "[便便]" to R.drawable.emoji_75,
+        "[月亮]" to R.drawable.emoji_76,
+        "[太阳]" to R.drawable.emoji_77,
+        "[礼物]" to R.drawable.emoji_78,
+        "[拥抱]" to R.drawable.emoji_79,
+        "[强]" to R.drawable.emoji_80,
+        "[弱]" to R.drawable.emoji_81,
+        "[握手]" to R.drawable.emoji_82,
+        "[胜利]" to R.drawable.emoji_83,
+        "[抱拳]" to R.drawable.emoji_84,
+        "[勾引]" to R.drawable.emoji_85,
+        "[拳头]" to R.drawable.emoji_86,
+        "[差劲]" to R.drawable.emoji_87,
+        "[爱你]" to R.drawable.emoji_88,
+        "[NO]" to R.drawable.emoji_89,
+        "[OK]" to R.drawable.emoji_90
+    )
+
+}

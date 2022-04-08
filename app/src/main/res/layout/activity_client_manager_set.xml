@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page"
+    tools:context=".activity.mine.company.ClientManagerSetActivity">
+
+    <com.android.ctgapp.widget.CustomTitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mTitle="选择负责人" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mPersonRV"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mBottomButtonLL"
+        android:layout_below="@id/mTitleBar" />
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/mBottomButtonLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/mSaveBTN"
+            style="@style/CommonButton"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:text="保存" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

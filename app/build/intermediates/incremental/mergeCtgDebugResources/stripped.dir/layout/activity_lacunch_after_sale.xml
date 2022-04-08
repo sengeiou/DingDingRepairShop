@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page"
+    android:orientation="vertical"
+    tools:context=".activity.deal.LaunchAfterSaleActivity">
+
+    <com.android.ctgapp.widget.CustomTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mTitle="发起售后" />
+
+    <ScrollView
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingHorizontal="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:text="请选择需要售后的商品"
+                    android:textColor="#2D2D2D" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_btn_dash_line"
+                    android:layerType="software" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mGoodsRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_btn_dash_line"
+                    android:layerType="software" />
+
+              <LinearLayout
+                  android:id="@+id/mSelectReturnReasonLL"
+                  android:gravity="center_vertical"
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="35dp">
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="退货原因"
+                      android:textColor="@color/black_text"
+                      android:textSize="12sp" />
+                  <TextView
+                      android:gravity="end"
+                      android:id="@+id/mSelectReasonTV"
+                      android:textSize="12sp"
+                      android:text="请选择"
+                      android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:layout_height="wrap_content"/>
+                  <ImageView
+                      android:paddingHorizontal="10dp"
+                      android:src="@drawable/icon_arrow_right_black"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"/>
+              </LinearLayout>
+
+                <EditText
+                    android:id="@+id/mRemarkET"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/bg_edit_border_radius_5"
+                    android:gravity="start"
+                    android:hint="请描述售后问题"
+                    android:maxLength="50"
+                    android:maxLines="4"
+                    android:padding="9dp"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingHorizontal="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:text="上传附件,最多四张,单张不超过4M"
+                    android:textColor="#A39D9D" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_btn_dash_line"
+                    android:layerType="software" />
+
+                <com.lwkandroid.widget.ninegridview.NineGridView
+                    android:id="@+id/mPhotoNGV"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/mConfirmBTN"
+            style="@style/CommonButton"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:text="确认" />
+    </RelativeLayout>
+
+</LinearLayout>

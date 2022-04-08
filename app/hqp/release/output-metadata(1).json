@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.ctgoe.app.hqp",
+  "variantName": "hqpRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 2,
+      "versionName": "1.0.1",
+      "outputFile": "hqp_1.0.1_0315_release.apk"
+    }
+  ]
+}

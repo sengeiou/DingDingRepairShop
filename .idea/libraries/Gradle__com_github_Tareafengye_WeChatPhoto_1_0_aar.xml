@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.Tareafengye:WeChatPhoto:1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/91d65283a01f008fcdce99d5637bb488/jetified-WeChatPhoto-1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/91d65283a01f008fcdce99d5637bb488/jetified-WeChatPhoto-1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/91d65283a01f008fcdce99d5637bb488/jetified-WeChatPhoto-1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Tareafengye/WeChatPhoto/1.0/c1b21f171e26e8897c0ec07296e46728c1e7e962/WeChatPhoto-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

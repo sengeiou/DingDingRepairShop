@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mTimeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:text="12月27日"
+        android:textSize="13sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mImageView"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/df" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/mImageView"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/black_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mCompanyTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:textSize="12sp"
+            android:textColor="#989898"
+            android:id="@+id/mFromWhereTV"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:text="来源:小程序" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/mLongLine"
+        style="@style/GrayLine"
+        android:layout_marginTop="10dp" />
+
+    <View
+        android:id="@+id/mShotLine"
+        style="@style/GrayLine"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="3dp" />
+
+</LinearLayout>

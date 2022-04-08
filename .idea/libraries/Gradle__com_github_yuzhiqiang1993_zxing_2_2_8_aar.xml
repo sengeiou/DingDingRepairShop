@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.yuzhiqiang1993:zxing:2.2.8@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/db7bf6fb2511d2e6de9aed67db842b77/jetified-zxing-2.2.8/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/db7bf6fb2511d2e6de9aed67db842b77/jetified-zxing-2.2.8/jars/libs/core-3.3.3.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/db7bf6fb2511d2e6de9aed67db842b77/jetified-zxing-2.2.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/db7bf6fb2511d2e6de9aed67db842b77/jetified-zxing-2.2.8/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.yuzhiqiang1993/zxing/2.2.8/6c76859daedc799c967e83d03de2bc8fba19f9c5/zxing-2.2.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

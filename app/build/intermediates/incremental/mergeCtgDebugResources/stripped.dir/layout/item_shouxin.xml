@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="4dp"
+    android:background="@drawable/bg_solid_whit_radius5dp"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="8dp">
+
+
+    <TextView
+        android:id="@+id/mNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="deer天牛"
+        android:textColor="@color/black_text" />
+
+    <TextView
+        android:id="@+id/mTimeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mNameTV"
+        android:text="1231"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/mStatueTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="已授权" />
+
+    <TextView
+        android:id="@+id/mCanUseMoneyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mNameTV"
+        android:text="可用额度:$123412" />
+
+</RelativeLayout>

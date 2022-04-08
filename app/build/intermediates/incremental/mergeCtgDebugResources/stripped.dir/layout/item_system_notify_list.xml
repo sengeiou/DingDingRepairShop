@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="8dp"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="8dp"
+
+    android:id="@+id/mParentLL"
+    android:background="@drawable/bg_solid_whit_radius5dp"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/mUnreadIV"
+            android:background="@drawable/bg_btn_red_circel"
+            android:layout_width="5dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_height="5dp"/>
+
+        <TextView
+            android:id="@+id/mTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="无锡xxx"
+            android:textColor="@color/black_text" />
+
+        <TextView
+            android:textSize="10sp"
+            android:id="@+id/mTimeTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:singleLine="true"
+            android:text="2021" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <TextView
+        android:textSize="12sp"
+        android:layout_marginTop="4dp"
+        android:id="@+id/mCompanyNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="无锡xxx"
+        android:textColor="@color/black_text" />
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/mContantTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="xxxxxxxxxx" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

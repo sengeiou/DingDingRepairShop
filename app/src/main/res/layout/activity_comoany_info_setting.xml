@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page"
+    android:orientation="vertical"
+    tools:context=".activity.mine.company.CompanyInfoSettingActivity">
+
+    <com.android.ctgapp.widget.CustomTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mTitle="企业信息" />
+    <com.android.ctgapp.common.CommonScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black_text"
+                android:text="基本信息"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="14dp"
+                        android:text="企业电话" />
+
+                    <EditText
+                        android:maxLength="15"
+                        android:inputType="phone"
+                        android:id="@+id/mCompanyPhoneET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/white"
+                        android:hint="请填写企业电话"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    style="@style/GrayLine"
+                    android:layout_marginStart="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="14dp"
+                        android:text="企业邮箱" />
+
+                    <EditText
+                        android:maxLength="30"
+                        android:id="@+id/mCompanyEmailET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/white"
+                        android:hint="请填写企业邮箱"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    style="@style/GrayLine"
+                    android:layout_marginStart="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="14dp"
+                        android:text="企业网址" />
+
+                    <EditText
+                        android:maxLength="30"
+                        android:id="@+id/mCompanyUrlET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/white"
+                        android:hint="请填写企业网址"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    style="@style/GrayLine"
+                    android:layout_marginStart="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="14dp"
+                        android:text="企业规模" />
+
+                    <TextView
+                        android:id="@+id/mCompanySizeTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:text="请选择企业规模"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/mSizePoint"
+                        android:layout_width="12dp"
+                        android:layout_height="7dp"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/icon_arrow_right_gray" />
+                </LinearLayout>
+
+                <View
+                    style="@style/GrayLine"
+                    android:layout_marginStart="14dp" />
+
+                <LinearLayout
+                    android:id="@+id/mIntroLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="14dp"
+                        android:text="企业简介" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:id="@+id/mCompanyIntroTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:text="请填写企业简介"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/icon_arrow_right_gray" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/mAddressSelectLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="14dp"
+                        android:text="所在地区" />
+
+                    <TextView
+                        android:id="@+id/mAddressSelectTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:text="所在地区"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/icon_arrow_right_gray" />
+                </LinearLayout>
+
+                <View
+                    style="@style/GrayLine"
+                    android:layout_marginStart="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="38dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="14dp"
+                        android:text="详细地址" />
+
+                    <EditText
+                        android:maxLength="50"
+                        android:id="@+id/mAddressDetailET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:height="40dp"
+                        android:background="@color/white"
+                        android:gravity="start"
+                        android:hint="详细地址:如道路、门牌号、小区、楼栋号、单元室等"
+                        android:maxLines="3"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black_text"
+                android:text="经营信息"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/mCarSeriesLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="14dp"
+                        android:text="主修车系" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:id="@+id/mCarSeries"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:text="请选择主修车系"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/icon_arrow_right_gray" />
+                </LinearLayout>
+
+                <View
+                    style="@style/GrayLine"
+                    android:layout_marginStart="14dp" />
+
+                <LinearLayout
+                    android:id="@+id/mLevelLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="14dp"
+                        android:text="维修等级" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:id="@+id/mLevelTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:text="请选择维修等级"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/icon_arrow_right_gray" />
+                </LinearLayout>
+
+                <View
+                    style="@style/GrayLine"
+                    android:layout_marginStart="14dp" />
+
+                <LinearLayout
+                    android:id="@+id/mInsuranceLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="14dp"
+                        android:text="合作保险公司" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:id="@+id/mInsuranceTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:text="请选择合作保险公司"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/icon_arrow_right_gray" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.android.ctgapp.common.CommonScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+        <Button
+            android:id="@+id/mConfirmBTN"
+            style="@style/CommonButton"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:text="确定" />
+    </RelativeLayout>
+</LinearLayout>

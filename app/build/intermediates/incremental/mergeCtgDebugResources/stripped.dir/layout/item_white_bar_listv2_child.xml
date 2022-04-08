@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="6dp"
+        android:background="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp"
+            android:id="@+id/mParentRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp">
+
+            <CheckBox
+                android:visibility="gone"
+                android:id="@+id/mCheckBox"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingVertical="30dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7" />
+
+            <TextView
+                android:id="@+id/mOrderNumberTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/mNeedInvoiceTV"
+                android:layout_toEndOf="@id/mCheckBox"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="TDZSDSADASD"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/mNeedInvoiceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/mIsPayedTV"
+                android:background="@drawable/bg_border_gray_circle_light"
+                android:paddingHorizontal="6dp"
+                android:text="开票"
+                android:textColor="#FF999999"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/mIsPayedTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:text="已还款"
+                android:textColor="@color/green_color"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/mLine"
+                style="@style/GrayLine"
+                android:layout_below="@id/mOrderNumberTV"
+                android:layout_marginVertical="8dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mLine"
+                android:layout_toEndOf="@id/mCheckBox"
+                android:text="挂账对账单"
+                android:textColor="@color/black_text"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mInvoiceAmountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mLine"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:text="$1214.50" />
+
+            <TextView
+                android:id="@+id/mLeftDateTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mInvoiceAmountTV"
+                android:layout_marginVertical="8dp"
+                android:layout_toEndOf="@id/mCheckBox"
+                android:text="2020-05-01"
+                android:textColor="#FF999999"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mRightDateTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mInvoiceAmountTV"
+                android:layout_alignParentEnd="true"
+                android:layout_marginVertical="8dp"
+                android:layout_marginEnd="20dp"
+                android:text="最迟还款日:2020/05/21"
+                android:textColor="#FF999999"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="4dp"
+                android:src="@drawable/icon_arrow_right_gray" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

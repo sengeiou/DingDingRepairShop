@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page"
+    android:orientation="vertical"
+    tools:context=".activity.mine.company.CompanyAttestationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.android.ctgapp.widget.CustomTitleBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mTitle="企业认证" />
+
+        <TextView
+            android:id="@+id/mEditTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="30dp"
+            android:paddingTop="42dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="10dp"
+            android:text="编辑" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="企业名称" />
+
+        <EditText
+            android:id="@+id/mCompanyNameET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:enabled="false"
+            android:gravity="end"
+            android:hint="必须与营业执照上的名称一致"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="#FF989898"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="统一社会信用代码或注册号" />
+
+        <EditText
+            android:id="@+id/mNumberET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:enabled="false"
+            android:gravity="end"
+            android:hint="请填写信用代码或注册号"
+            android:maxLength="30"
+            android:singleLine="true"
+            android:textColor="#FF989898"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="法人代表" />
+
+        <EditText
+            android:id="@+id/mLegalET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:enabled="false"
+            android:gravity="end"
+            android:hint="请填写法人代表"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="#FF989898"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/mTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            android:text="上传营业执照" />
+
+
+        <ImageView
+            android:id="@+id/mAuditIV"
+            android:layout_width="170dp"
+            android:layout_height="112dp"
+            android:layout_below="@id/mTitleTV"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/img_camera_circel_bg" />
+
+        <ImageView
+            android:id="@+id/mAuthResultIV"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/mAuditIV"
+            android:layout_marginStart="-60dp"
+            android:layout_marginTop="-60dp"
+            android:layout_toEndOf="@id/mAuditIV" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mAuditResultTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/red_start"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:id="@+id/mSubmitRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <Button
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/mSubmitBTN"
+            style="@style/CommonButton"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/submit" />
+    </RelativeLayout>
+</LinearLayout>

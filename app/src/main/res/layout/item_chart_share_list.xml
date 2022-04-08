@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mParentRL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mImageViewCV"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="9dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/mImageHeaderIV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_page"
+                android:scaleType="centerCrop"
+                android:src="@drawable/df" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/mOnlineTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorAccentLight"
+                android:paddingHorizontal="6dp"
+                android:text="在线"
+                android:paddingVertical="1dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="6sp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <TextView
+        android:id="@+id/mTitleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="17dp"
+        android:layout_toEndOf="@id/mImageViewCV"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="车同轨客服"
+        android:textColor="@color/black_text"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/mCheckBox"
+        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:scaleX="0.7"
+        android:scaleY="0.7" />
+
+
+</RelativeLayout>

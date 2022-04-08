@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp"
+    android:background="@color/colorAccent">
+
+    <TextView
+        android:id="@+id/mTitleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="我是标题"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_alignBaseline="@id/mBTN"
+        android:id="@+id/mContentTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mTitleTV"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp"
+        android:text="我是内容"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/mBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mTitleTV"
+        android:layout_alignParentEnd="true"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="12dp"
+        android:text="我是一个按钮"
+        android:textColor="@color/white" />
+</RelativeLayout>

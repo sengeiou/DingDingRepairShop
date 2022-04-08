@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page"
+    android:orientation="vertical"
+    tools:context=".activity.home.enquiry.EpcDetailActivity">
+
+    <com.android.ctgapp.widget.CustomTitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp">
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/mIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.youth.banner.Banner
+            android:visibility="gone"
+            android:id="@+id/mBanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/mBannerCountTV"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="12dp"
+            android:background="@drawable/bg_gray_tranpancy_circle"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/mCarInfoTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:ellipsize="end"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        android:singleLine="true"
+         />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mEpcDetailRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <!--底部菜单-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/mSelectedLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="7dp"
+                android:src="@drawable/ic_select_count" />
+
+            <TextView
+                android:id="@+id/SelectTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已选中"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/mSelectCountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="-42dp"
+                android:background="@drawable/bg_btn_red_circel"
+                android:gravity="center"
+                android:minWidth="16dp"
+                android:minHeight="16dp"
+                android:paddingHorizontal="2dp"
+                android:text="99"
+                android:textColor="@color/white"
+                android:textSize="9sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Button
+            android:id="@+id/mBackBTN"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_yellow_circle"
+            android:text="返回添加"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/mGoEnquireBTN"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_common"
+            android:text="去询价"
+            android:textColor="@color/white" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

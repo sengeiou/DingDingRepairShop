@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page"
+    android:orientation="vertical"
+    tools:context=".activity.company.CreateCompanyActivity">
+
+    <com.android.ctgapp.widget.CustomTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:mTitle="创建企业" />
+
+    <LinearLayout
+        style="@style/CompanyCreateLL"
+        android:layout_marginTop="1dp">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="企业名称" />
+
+            <TextView style="@style/CompanyCreateStart" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/mCompanyNameTV"
+            style="@style/CompanyCreateET"
+            android:hint="请输入企业名称"
+            android:maxLength="30" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mAddressSelectLL"
+        style="@style/CompanyCreateLL"
+        android:layout_marginTop="1dp">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地址" />
+
+            <TextView style="@style/CompanyCreateStart" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mAddressTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="请选择地址" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/CompanyCreateLL"
+        android:layout_marginTop="1dp">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="详细地址" />
+
+            <TextView style="@style/CompanyCreateStart" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/mAddressDetailTV"
+            style="@style/CompanyCreateET"
+            android:hint="请填写详细地址"
+            android:maxLength="50" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/CompanyCreateLL"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="企业邮箱" />
+
+        <EditText
+            android:id="@+id/mEmailET"
+            style="@style/CompanyCreateET"
+            android:digits="@string/CheckEmail"
+            android:hint="请填写企业邮箱"
+            android:maxLength="30" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/CompanyCreateLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="企业规模" />
+
+        <TextView
+            android:id="@+id/mCompanySizeTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:text="请选择企业规模"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/mSizePoint"
+            android:layout_width="11dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/icon_arrow_right_gray" />
+    </LinearLayout>
+
+    <!--    <LinearLayout-->
+    <!--        style="@style/CompanyCreateLL"-->
+    <!--        android:layout_marginTop="1dp">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="100dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="人员规模" />-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/mPeoplesET"-->
+    <!--            style="@style/CompanyCreateET"-->
+    <!--            android:hint="请填写人员规模" />-->
+    <!--    </LinearLayout>-->
+
+    <LinearLayout
+        style="@style/CompanyCreateLL"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="企业网址" />
+
+        <EditText
+            android:id="@+id/mUrlET"
+            style="@style/CompanyCreateET"
+            android:hint="请填写企业网址"
+            android:maxLength="30" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/CompanyCreateLL"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="企业电话" />
+
+        <EditText
+            android:id="@+id/mPhoneET"
+            style="@style/CompanyCreateET"
+            android:hint="请填写企业电话"
+            android:inputType="number"
+            android:maxLength="15" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/CompanyCreateLL"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="企业简介" />
+
+        <EditText
+            android:id="@+id/mIntroET"
+            style="@style/CompanyCreateET"
+            android:hint="请填写企业简介"
+            android:maxLength="100"
+            android:maxLines="5" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/CompanyCreateLL"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="激活码" />
+
+        <EditText
+            android:digits="@string/CheckWordAndNum"
+            android:id="@+id/mActivationCodeET"
+            style="@style/CompanyCreateET"
+            android:hint="请填写激活码"
+            android:maxLength="100"
+            android:maxLines="5" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/mConfirmBTN"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_btn_common"
+            android:text="确定"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

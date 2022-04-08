@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.ctgoe.app.dingding",
+  "variantName": "ctgRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 13,
+      "versionName": "1.0.13",
+      "outputFile": "ctg_1.0.13_0315_release.apk"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:id="@+id/mParentLL"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="230dp"
+            android:id="@+id/mNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_text"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/mCompanyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:text="@string/test_phone"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mAddressTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/test_long"
+        android:textColor="@color/black_text"
+        android:textSize="13sp" />
+
+    <View
+        style="@style/GrayLine"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/mCheckBox"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:scaleX="0.5"
+            android:scaleY="0.5" />
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/mCheckBoxTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="设为默认"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/mDeleteTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="删除"
+            android:textColor="#A2A2A2"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/mEditTextTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="编辑"
+            android:textColor="#A2A2A2"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <View style="@style/GrayLineWide" />
+
+</LinearLayout>

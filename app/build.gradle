@@ -1,0 +1,455 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'bugly'
+
+/**打包注意
+ 测试环境不报错正式环境报错 混淆问题
+ 1.测试和正式的 CUSTOM_ALLIANCE_ID 记得替换
+ 2.将LOG 关闭
+ 3.涉及到支付微信相关的debug下的签名需要改一下
+ 4.支付没有回调看看清单文件是否
+ 5.汽修钉钉 BATE 换正式服 要把APPCODE 和 ANDROID_KEY 替换一下
+ 6.正式发布记得 BATE和 正式地址要替换 APP_CODE 也要换
+ */
+
+bugly {
+    appId = 'f7810dd409' // 注册时分配的App ID
+    appKey = '61a9527f-5abe-483d-872f-009a27501555' // 注册时分配的App Key
+}
+
+android {
+    compileSdk 29
+    buildToolsVersion '29.0.3'
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 29
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk { //设置支持的SO库架构
+            abiFilters 'armeabi-v7a'
+        }
+        signingConfig signingConfigs.debug
+        //针对Room警告Schema export directory is not provided to the annotation processor so we cannot export the schema
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
+    }
+    //极光
+    packagingOptions {
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
+    }
+    signingConfigs {
+        //此处修改debug为 testModel
+        testModel {
+            storeFile file('/Users/libowen/Downloads/key/蓝鲸联盟/lanjing.keystore')
+            storePassword 'lanjing'
+            keyAlias 'ljapp'
+            keyPassword 'lanjing'
+        }
+        ctg {
+            storeFile file(var)
+            storePassword 'ctgstw'
+            keyAlias 'ctgapp'
+            keyPassword 'ctgstw'
+        }
+        chepinhui {
+            storeFile file('/Users/libowen/Downloads/key/车品汇/chepinhui.keystore')
+            storePassword 'chepinhui'
+            keyAlias 'cphapp'
+            keyPassword 'chepinhui'
+        }
+        xingda {
+            storeFile file('/Users/libowen/Downloads/key/兴达/xingda.keystore')
+            storePassword 'xingda'
+            keyAlias 'xdapp'
+            keyPassword 'xingda'
+        }
+        wlwlwl {
+            storeFile file('/Users/libowen/Downloads/key/wl/wl.keystore')
+            storePassword 'wlwlwl'
+            keyAlias 'wlapp'
+            keyPassword 'wlwlwl'
+        }
+        lanjing {
+            storeFile file('/Users/libowen/Downloads/key/蓝鲸联盟/lanjing.keystore')
+            storePassword 'lanjing'
+            keyAlias 'ljapp'
+            keyPassword 'lanjing'
+        }
+    }
+
+
+    buildTypes {
+        release {
+            // 开启混淆
+            minifyEnabled true
+            // 开启ZipAlign优化
+            zipAlignEnabled true
+            //自选压缩
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //生产环境下的服务器地址
+            //生产环境下的服务器地址 上正式服的时候用这个
+            buildConfigField 'String', 'SERVER_URL', '"http://api.ctg.ctgoe.com/"'
+            //Beta正式地址 测试用
+//            buildConfigField 'String', 'SERVER_URL', '"http://beta.api.ctg.ctgoe.com/"'
+            buildConfigField 'String', 'SOCKET_URL', '"wss://ws.v2.ctgoe.com/ws?token="'
+            buildConfigField 'String', 'ossHeader', '"https://ctgoe.oss-cn-qingdao.aliyuncs.com/urm/"'
+        }
+        debug {
+            //生产环境
+//            buildConfigField 'String', 'SERVER_URL', '"http://api.ctg.ctgoe.com"'
+//            buildConfigField 'String', 'SOCKET_URL', '"wss://ws.v2.ctgoe.com/ws?token="'
+//            buildConfigField 'String', 'ossHeader', '"https://ctgoe.oss-cn-qingdao.aliyuncs.com/urm/"'
+
+            //新的华为云测试地址VIN_HISTORY
+            buildConfigField 'String', 'SERVER_URL', '"http://124.71.163.149:4000"'
+            buildConfigField 'String', 'ossHeader', '"https://ctgdev.oss-cn-shanghai.aliyuncs.com/urm/"'
+//            聊天华为云地址
+            buildConfigField 'String', 'SOCKET_URL', '"ws://124.71.136.219:7000/ws?token="'
+
+            //不混淆
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //涉及到支付 测试的时候修改此处
+            signingConfig signingConfigs.ctg
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility "1.8"
+        targetCompatibility "1.8"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    //打包的APK名称
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+//            outputFileName = "${variant.productFlavors[0].name}_${defaultConfig.versionName}_${releaseTime()}_${buildType.name}.apk"
+            outputFileName = "${variant.productFlavors[0].name}_${variant.mergedFlavor.versionName}_${releaseTime()}_${buildType.name}.apk"
+        }
+    }
+
+
+    // 多渠道 的不同配置
+    productFlavors {
+        //车同轨
+        ctg {
+            applicationId "com.ctgoe.app.dingding"
+            flavorDimensions "versionCode"
+            versionCode 13
+            versionName "1.0.13"
+            //string.xml
+            resValue "string", "app_name", "汽修钉钉"
+            //生产环境下的服务器地址
+            buildConfigField "String", "FILE_PROVIDER", '"com.android.ctgapp.fileProvider"'
+            buildConfigField "String", "WX_APP_ID", '"wx635283d6cec45ac9"'
+            buildConfigField "Integer", "CUSTOM_ALLIANCE_ID", '-1'
+            /**记得修改 发布不用Beta*/
+            buildConfigField "String", "APP_CODE", '"CTG_APP_ANDROID_REPAIRSHOP"'
+            //Bate
+//            buildConfigField "String", "APP_CODE", '"APP_DINGDING_BETA_ANDROID"'
+            buildConfigField "Integer", "GOODS_SEARCH_TYPE", '5'
+            //购物车和立即下单的传值 目前WL传11其他传2
+            buildConfigField "Integer", "ORDER_TYPE", '2'
+            buildConfigField "String", "ANDROID_KEY", '"ctgStw_seabird237ownice65123"'
+            buildConfigField "String", "ANDROID_PLATFORM", '"CTG_APP_ANDROID_REPAIRSHOP"'
+            //manifest里面的值
+            manifestPlaceholders = [
+                    FILE_PROVIDER: "com.android.ctgapp.fileProvider",
+                    JPUSH_PKGNAME: applicationId,
+                    JPUSH_APPKEY : "90be10cec0f6070dc00f7f87", //JPush 上注册的包名对应的 Appkey.
+                    JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+            ]
+            signingConfig signingConfigs.ctg
+        }
+
+        //星达
+        xingda {
+            // 每个环境包名不同
+            applicationId "com.ctgoe.app.xingda"
+            flavorDimensions "versionCode"
+            versionCode 1
+            versionName "1.0.0"
+//            // 动态添加 string.xml 字段 在 string.xml中不可有重名字段
+            resValue "string", "app_name", "星达科技"
+            //生产环境下的服务器地址
+            buildConfigField "String", "FILE_PROVIDER", '"com.android.xingda.fileProvider"'
+            buildConfigField "String", "WX_APP_ID", '"wx14c90ddf694960f3"'
+            buildConfigField "Integer", "CUSTOM_ALLIANCE_ID", '888898016'
+            buildConfigField "String", "APP_CODE", '"APP_XINGDAKEJI_ANDROID"'
+            buildConfigField "Integer", "GOODS_SEARCH_TYPE", '2'
+            buildConfigField "Integer", "ORDER_TYPE", '2'
+            buildConfigField "String", "ANDROID_KEY", '"ctgStw_seabird237ownice65123"'
+            buildConfigField "String", "ANDROID_PLATFORM", '"CTG_APP_ANDROID_REPAIRSHOP"'
+            manifestPlaceholders = [
+                    FILE_PROVIDER: "com.android.xingda.fileProvider"
+            ]
+        }
+
+        //车品慧
+        chepinhui {
+            versionCode 2
+            versionName "1.0.1"
+            applicationId "com.ctgoe.app.chepinhui"
+            flavorDimensions "versionCode"
+            //string.xml
+            resValue "string", "app_name", "车品慧"
+            //生产环境下的服务器地址
+            buildConfigField "String", "FILE_PROVIDER", '"com.android.chepinhui.fileProvider"'
+            buildConfigField "String", "WX_APP_ID", '"wx88f0c589cabb9147"'
+            buildConfigField "Integer", "CUSTOM_ALLIANCE_ID", '1000000137'
+            buildConfigField "String", "APP_CODE", '"APP_CHEPINHUI_ANDROID"'
+            buildConfigField "Integer", "GOODS_SEARCH_TYPE", '1'
+            buildConfigField "Integer", "ORDER_TYPE", '2'
+            buildConfigField "String", "ANDROID_KEY", '"ctgStw_seabird237ownice65123"'
+            buildConfigField "String", "ANDROID_PLATFORM", '"CTG_APP_ANDROID_REPAIRSHOP"'
+            manifestPlaceholders = [
+                    FILE_PROVIDER: "com.android.chepinhui.fileProvider"]
+        }
+        WL {
+            versionCode 10
+            versionName "1.0.10"
+            applicationId "com.ctgoe.app.wl"
+            flavorDimensions "versionCode"
+            //string.xml
+            resValue "string", "app_name", "WL汽配服务站"
+            buildConfigField "String", "FILE_PROVIDER", '"com.android.hqp.fileProvider"'
+            buildConfigField "String", "WX_APP_ID", '"wxf2562ca1edb2504e"'
+            //正式AllianceID
+//            buildConfigField "Integer", "CUSTOM_ALLIANCE_ID", '88880001'
+//            测试
+            buildConfigField "Integer", "CUSTOM_ALLIANCE_ID", '1000000331'
+            buildConfigField "String", "APP_CODE", '"APP_WL_ANDROID"'
+            buildConfigField "Integer", "GOODS_SEARCH_TYPE", '4'
+            buildConfigField "Integer", "ORDER_TYPE", '12'
+            buildConfigField "String", "ANDROID_KEY", '"ctgStw_dinosaur8419pretty823"'
+            buildConfigField "String", "ANDROID_PLATFORM", '"WL_APP_ANDROID_REPAIRSHOP"'
+            manifestPlaceholders = [
+                    FILE_PROVIDER: "com.android.hqp.fileProvider",
+                    JPUSH_PKGNAME: applicationId,
+                    JPUSH_APPKEY : "8d36924f986003ae2185abae", //JPush 上注册的包名对应的 Appkey.
+                    JPUSH_CHANNEL: "developer-default", //暂时填写
+            ]
+        }
+        //蓝鲸联盟
+        lanjing {
+            versionCode 11
+            versionName "1.0.9"
+            applicationId "com.ctgoe.app.lanjing"
+            flavorDimensions "versionCode"
+            //string.xml
+            resValue "string", "app_name", "蓝鲸车联"
+            buildConfigField "String", "FILE_PROVIDER", '"com.android.lanjing.fileProvider"'
+            buildConfigField "String", "WX_APP_ID", '"wx182f0450882be6d9"'
+            //正式服
+            buildConfigField "Integer", "CUSTOM_ALLIANCE_ID", '888898134'
+            //测试服
+//            buildConfigField "Integer", "CUSTOM_ALLIANCE_ID", '1000000277'
+
+            buildConfigField "String", "APP_CODE", '"APP_LANJINGLIANMENG_ANDROID"'
+            buildConfigField "Integer", "GOODS_SEARCH_TYPE", '3'
+            buildConfigField "Integer", "ORDER_TYPE", '2'
+            buildConfigField "String", "ANDROID_KEY", '"ctgStw_seabird237ownice65123"'
+            buildConfigField "String", "ANDROID_PLATFORM", '"CTG_APP_ANDROID_REPAIRSHOP"'
+            manifestPlaceholders = [
+                    FILE_PROVIDER: "com.android.lanjing.fileProvider",
+                    JPUSH_PKGNAME: applicationId,
+                    JPUSH_APPKEY : "8ebd966be84fc95cf1e8d163", //JPush 上注册的包名对应的 Appkey.
+                    JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+            ]
+            signingConfig signingConfigs.lanjing
+        }
+        //合汽配
+        hqp {
+            versionCode 2
+            versionName "1.0.1"
+            applicationId "com.ctgoe.app.hqp"
+            flavorDimensions "versionCode"
+            //string.xml
+            resValue "string", "app_name", "合汽配"
+            buildConfigField "String", "FILE_PROVIDER", '"com.android.heqipei.fileProvider"'
+            buildConfigField "String", "WX_APP_ID", '"wx590ba8a12177615d"'
+            //正式服
+            buildConfigField "Integer", "CUSTOM_ALLIANCE_ID", '888906490'
+            //测试服
+//            buildConfigField "Integer", "CUSTOM_ALLIANCE_ID", '1000000277'
+
+            buildConfigField "String", "APP_CODE", '"HQP_APP_ANDROID"'
+            buildConfigField "Integer", "GOODS_SEARCH_TYPE", '5'
+            buildConfigField "Integer", "ORDER_TYPE", '2'
+            buildConfigField "String", "ANDROID_KEY", '"ctgStw_peach^2838gjk948!23sp92"'
+            buildConfigField "String", "ANDROID_PLATFORM", '"HQP_APP_ANDROID"'
+            manifestPlaceholders = [
+                    FILE_PROVIDER: "com.android.heqipei.fileProvider",
+                    JPUSH_PKGNAME: applicationId,
+                    JPUSH_APPKEY : "c148c0eb695fae4117b94348", //JPush 上注册的包名对应的 Appkey.
+                    JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+            ]
+            signingConfig signingConfigs.lanjing
+        }
+    }
+
+    //移除lint检测的error
+    lintOptions {
+        abortOnError false
+    }
+}
+
+
+/**
+ * 发布时间
+ * @return
+ */
+static def releaseTime() {
+    return new Date().format("MMdd", TimeZone.getTimeZone("UTC"))
+}
+
+//获取local.properties的内容
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+
+dependencies {
+    implementation files('libs/isoparser-1.0.6.jar')
+    implementation files('libs/aspectjrt-1.7.3.jar')
+    implementation project(path: ':mp3record')
+    implementation project(path: ':VinLibrary')
+    implementation project(path: ':image')
+    def lifecycle_version = "2.2.0"
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.32"
+    implementation 'androidx.core:core-ktx:1.3.2'
+//    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //内存泄漏检测
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    // Optional, if you use support library fragments:
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
+    //支付宝依赖
+    implementation(name: 'alipaySdk-15.7.9-20200727142846', ext: 'aar')
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.8.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    //隐藏键盘
+    implementation 'com.blankj:utilcodex:1.26.0'
+    implementation 'com.google.code.gson:gson:2.8.8'
+    //AnKo
+    implementation 'org.jetbrains.anko:anko-sdk15:0.10.7'
+    //RecyclerView列表
+    implementation 'com.android.support:recyclerview-v7:29.0.3'
+    //下拉刷新上拉加载
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.3'
+
+    //Glide图片加载
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    //jetPack
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    //圆形头像
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    //google的Material库
+    implementation 'com.google.android.material:material:1.2.1'
+    //图片和视频选择框架
+    implementation 'com.zhihu.android:matisse:0.5.3-beta3'
+    //图片压缩框架
+    implementation 'com.github.nanchen2251:CompressHelper:1.0.5'
+    //Recycler侧滑
+    implementation 'com.yanzhenjie.recyclerview:x:1.3.2'
+    //通讯录框架
+    implementation 'com.github.nanchen2251:WaveSideBar:1.0.6'
+    //轮播
+    implementation 'com.youth.banner:banner:2.1.0'
+    //翻转公告栏
+    implementation 'me.bakumon:bulletinview:1.0.0'
+    //扫码
+    implementation 'com.github.yuzhiqiang1993:zxing:2.2.8'
+    //九宫格图片展示和图片选择框架
+    implementation 'com.lwkandroid.widget:NineGridView:1.2.5'
+    implementation "com.lwkandroid:ImagePicker:1.4.4"
+    //微信支付
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.7.0'
+//    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:1.4.0'
+//    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    //折线图
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    //webSocket
+    implementation "org.java-websocket:Java-WebSocket:1.5.1"
+//    kapt "androidx.room:room-compiler:2.2.5"
+//    implementation "androidx.room:room-runtime:2.2.5"
+    //兼容M1 的Room
+    def room_version = "2.3.0"
+    implementation("androidx.room:room-runtime:$room_version") {
+        exclude(group:'org.xerial')
+    }
+    kapt("androidx.room:room-compiler:$room_version"){
+        exclude(group:'org.xerial')
+    }
+    implementation("androidx.room:room-ktx:$room_version"){
+        exclude(group:'org.xerial')
+    }
+    implementation 'org.xerial:sqlite-jdbc:3.34.0' // 最重要的 最重要的 最重要的
+
+    //仿微信长按拍视频短按拍照
+    implementation 'com.github.Tareafengye:WeChatPhoto:1.0'
+
+
+    //图片压缩
+    implementation 'com.github.nanchen2251:CompressHelper:1.0.5'
+    //微信发语音框架
+    implementation 'com.ilike:voicerecorder:1.0.2'
+    //动画库
+    implementation 'com.daimajia.androidanimations:library:2.4@aar'
+    //骨架屏幕
+    implementation 'com.ethanhua:skeleton:1.1.2'
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
+
+    //图片拖拽放大缩小
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    //权限
+    implementation 'com.permissionx.guolindev:permissionx:1.4.0'
+    //腾讯bugly
+    implementation 'com.tencent.bugly:crashreport:3.3.92'
+    implementation 'com.tencent.bugly:nativecrashreport:3.9.1'
+    //UI库
+    implementation 'com.github.xuexiangjys:XUI:1.1.7'
+    //极光推送
+    implementation 'cn.jiguang.sdk:jpush:4.2.8'  // 此处以JPush 4.2.8 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.9.0'  // 此处以JCore 2.9.0 版本为例。
+    //视频播放库
+//    implementation 'fm.jiecao:jiecaovideoplayer:4.8.3'
+    implementation 'cn.jzvd:jiaozivideoplayer:7.7.0'
+    implementation project(':image')
+    //eventBus
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    //查看数据库
+    debugImplementation 'com.glance.guolindev:glance:1.0.0'
+
+
+
+//    implementation 'io.gitee.wxlibowen:wxlibowen:1.0.2'
+    implementation 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+}

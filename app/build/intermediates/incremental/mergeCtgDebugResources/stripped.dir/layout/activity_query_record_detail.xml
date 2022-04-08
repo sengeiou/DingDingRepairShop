@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page"
+    tools:context=".activity.deal.QueryRecordDetailActivity">
+
+    <com.android.ctgapp.widget.CustomTitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mTitle="询价单详情页" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_above="@id/mBottomRL"
+        android:layout_below="@id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="14dp"
+                android:text="询价单信息"
+                android:textColor="@color/colorAccent" />
+
+            <com.android.ctgapp.widget.CommonHorizontalLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mOrderNumTV"
+                android:layout_marginTop="1dp"
+                app:mStartTV="询价单号" />
+
+            <com.android.ctgapp.widget.CommonHorizontalLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mStartTV="车型" />
+
+            <com.android.ctgapp.widget.CommonHorizontalLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mStartTV="车架号" />
+
+            <com.android.ctgapp.widget.CommonHorizontalLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mStartTV="创建时间" />
+
+            <com.android.ctgapp.widget.CommonHorizontalLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mStartTV="是否需要发票" />
+
+            <com.android.ctgapp.widget.CommonHorizontalLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mStartTV="备注" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="14dp"
+                android:text="发送对象"
+                android:textColor="@color/colorAccent" />
+
+            <com.android.ctgapp.widget.CommonHorizontalLayout
+                android:layout_width="match_parent"
+                app:mMaxLines="2"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                app:mStartTV="供应商" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="需求配件列表"
+                    android:textColor="@color/colorAccent" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="共计零件" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="种" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.android.ctgapp.widget.CommonHorizontalLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mStartTV="右前保侧支架" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="14dp"
+                android:text="报价列表"
+                android:textColor="@color/colorAccent" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/mBottomRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:text="追加询价"
+            style="@style/CommonButton"
+            />
+    </RelativeLayout>
+</RelativeLayout>

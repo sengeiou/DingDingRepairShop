@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.mine.money.RechargeCommitActivity">
+
+
+    <com.android.ctgapp.widget.CustomTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mTitle="充值" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:text="充值金额"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="@color/black"
+                android:textSize="19sp" />
+
+            <EditText
+                android:padding="10dp"
+                android:enabled="false"
+                android:hint="请输入需要充值金额"
+                android:id="@+id/mTotalPriceTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/mTimeCountLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付剩余时间"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTimeCountTV"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="00:12:00"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+   <LinearLayout
+       android:background="@color/white"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <TextView
+           android:layout_marginLeft="10dp"
+           android:text="充值方式"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+       <LinearLayout
+           android:id="@+id/mWeChatLL"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/white"
+           android:gravity="center_vertical"
+           android:orientation="horizontal"
+           android:padding="10dp">
+
+
+           <ImageView
+               android:layout_width="26dp"
+               android:layout_height="26dp"
+               android:src="@drawable/icon_wechat" />
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="10dp"
+               android:layout_weight="1"
+               android:text="微信支付" />
+
+           <CheckBox
+               android:id="@+id/mWeChatCB"
+               style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+               android:layout_width="30dp"
+               android:layout_height="25dp"
+               android:scaleX="0.6"
+               android:scaleY="0.6" />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/mAliPayLL"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="1dp"
+           android:background="@color/white"
+           android:gravity="center_vertical"
+           android:orientation="horizontal"
+           android:padding="10dp">
+
+           <ImageView
+               android:layout_width="26dp"
+               android:layout_height="26dp"
+               android:src="@drawable/icon_alipay" />
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="10dp"
+               android:layout_weight="1"
+               android:text="支付宝支付" />
+
+           <CheckBox
+               android:id="@+id/mAliPayCB"
+               style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+               android:layout_width="30dp"
+               android:layout_height="25dp"
+               android:scaleX="0.6"
+               android:scaleY="0.6" />
+       </LinearLayout>
+   </LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:id="@+id/mPayButtonRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/mConfirmPayBTN"
+            style="@style/CommonButton"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:text="确认充值" />
+    </RelativeLayout>
+
+
+</LinearLayout>

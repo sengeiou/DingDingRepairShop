@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/mCancelIV"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/edit_delete" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mImageViewCV"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="10dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/mImageViewIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_page"
+                    android:contentDescription="@string/app_name" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:textSize="11sp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/mPartNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/mImageViewCV"
+                android:ellipsize="end"
+                android:maxLines="2" />
+
+
+            <TextView
+                android:id="@+id/mNumberTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/mImageViewCV"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/mImageViewCV"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/mRMB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/mNumberTV"
+                android:layout_marginBottom="2dp"
+                android:layout_toEndOf="@id/mImageViewCV"
+                android:text="¥"
+                android:textColor="@color/red_start"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/mPriceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/mNumberTV"
+                android:layout_marginStart="2dp"
+                android:layout_toEndOf="@id/mRMB"
+                android:text="123"
+                android:textColor="@color/red_start"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View style="@style/GrayLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="购买数量"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:id="@+id/mMinusBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp">
+
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="20dp"
+                    android:background="#F1F2F3"
+                    android:gravity="center"
+                    android:text="-" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/mGoodsCountTV"
+                android:layout_width="33dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#F7F7F7"
+                android:gravity="center"
+                android:text="1" />
+
+            <RelativeLayout
+                android:id="@+id/mAddBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="20dp"
+                    android:background="#ddddde"
+                    android:gravity="center"
+                    android:text="+" />
+            </RelativeLayout>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mSortRV"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+        <LinearLayout
+            android:id="@+id/mBottomButtonLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/mAddTrolleyBTN"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_yellow_left_radius"
+                android:text="加入购物车"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/mBuyBTN"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_blue_radius_right"
+                android:text="立即购买"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

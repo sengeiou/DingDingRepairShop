@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.nanchen2251:WaveSideBar:1.0.6@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d70a849c976075ddc904f707f4250141/jetified-WaveSideBar-1.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d70a849c976075ddc904f707f4250141/jetified-WaveSideBar-1.0.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d70a849c976075ddc904f707f4250141/jetified-WaveSideBar-1.0.6/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.nanchen2251/WaveSideBar/1.0.6/9a784a6e70ff8a5f3df5e55e60734ac5778b2acc/WaveSideBar-1.0.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.nanchen2251/WaveSideBar/1.0.6/1e5bfde55efed3c8c1961d8df317a1f1e054b38d/WaveSideBar-1.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

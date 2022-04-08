@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :alipaySdk-15.7.9-20200727142846:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3bbb2eadcabc66ccba6e124e0360614b/jetified-alipaySdk-15.7.9-20200727142846/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3bbb2eadcabc66ccba6e124e0360614b/jetified-alipaySdk-15.7.9-20200727142846/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3bbb2eadcabc66ccba6e124e0360614b/jetified-alipaySdk-15.7.9-20200727142846/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

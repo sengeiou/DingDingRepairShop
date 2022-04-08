@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.lwkandroid.widget:NineGridView:1.2.5@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/889860140088599cf95bbee86f09575b/jetified-NineGridView-1.2.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/889860140088599cf95bbee86f09575b/jetified-NineGridView-1.2.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/889860140088599cf95bbee86f09575b/jetified-NineGridView-1.2.5/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.lwkandroid.widget/NineGridView/1.2.5/b9960f901614e8178bf98c5fa9c40c97ffd6a024/NineGridView-1.2.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.lwkandroid.widget/NineGridView/1.2.5/57102db2c2b1d8615660ec40b385da343a6c1db5/NineGridView-1.2.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="10dp"
+    android:id="@+id/mParentRL"
+    android:background="@drawable/bg_card_view"
+    android:orientation="horizontal"
+    android:paddingHorizontal="4dp"
+    android:paddingVertical="12dp">
+
+    <CheckBox
+        android:id="@+id/mCheckBox"
+        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:scaleX="0.7"
+        android:scaleY="0.7" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/mEndIV"
+        android:layout_toEndOf="@id/mCheckBox">
+
+        <TextView
+            android:id="@+id/mCompanyNameTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/mStatueTV"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="无锡xxxx有线公司"
+            android:textColor="@color/black_text" />
+
+        <TextView
+            android:id="@+id/mStatueTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="未还款"
+            android:textColor="@color/red_start" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mCompanyNameTV"
+            android:text="对账总额" />
+
+        <TextView
+            android:id="@+id/mMoneyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mStatueTV"
+            android:layout_alignParentEnd="true"
+            android:text="$123"
+            android:textColor="@color/black_text" />
+
+        <TextView
+            android:id="@+id/mPayCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mStatueTV"
+            android:layout_alignBaseline="@id/mMoneyTV"
+            android:layout_toStartOf="@id/mMoneyTV"
+            android:text="共(2)笔"
+            android:textSize="9sp" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/mEndIV"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:padding="2dp"
+        android:src="@drawable/icon_arrow_right_gray" />
+</RelativeLayout>

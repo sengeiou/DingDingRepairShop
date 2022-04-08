@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--主题色-->
+    <!--汽配钉钉-->
+    <color name="colorPrimary">#2A60AA</color>
+    <color name="colorPrimaryDark">#2A60AA</color>
+<!--    <color name="colorAccentOld">#3976FE</color>-->
+    <color name="colorAccent">#2A60AA</color>
+    <color name="colorAccentDark">#2A60AA</color>
+    <color name="colorAccentLight">#FFBECFE5</color>
+    <!--渐变起始颜色-->
+    <color name="gradualChangeStart">#699BFF</color>
+    <color name="commonCancel">#FFFF9999</color>
+
+
+
+    <!--星达-->
+    <!--    <color name="colorPrimary">#FF6666</color>-->
+    <!--    <color name="colorPrimaryDark">#FF6666</color>-->
+    <!--    <color name="colorAccent">#FF6666</color>-->
+    <!--    <color name="colorAccentLight">#ffFFCCCC</color>-->
+    <!--渐变起始颜色-->
+    <!--    <color name="gradualChangeStart">#FF8888</color>-->
+
+
+    <!--其他配色-->
+    <color name="red_dark">#FFC90008</color>
+
+    <color name="blue_common">@color/colorAccent</color>
+    <color name="transparency">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="lbg">#1AFFFFFF</color>
+    <color name="line2">#F3F3F3</color>
+    <color name="gray_page">#f0f0f0</color>
+    <color name="tv5">#777777</color>
+    <color name="tv3">#777777</color>
+    <color name="tv6">#989898</color>
+<!--    <color name="red_start">#FF3838</color>-->
+    <color name="red_start">#FFC90008</color>
+    <color name="gray_text">#777777</color>
+    <color name="gray_text_light">#989898</color>
+    <color name="gray_text_light_more">#eee</color>
+    <color name="tv11">#038EFF</color>
+    <color name="blue_light">#398AF7</color>
+
+    <color name="black_text">#333333</color>
+    <color name="text_white_light">#E5EFFD</color>
+    <color name="text_gray_light">#9b9b9b</color>
+    <color name="lost_efficacy">#FF8F8F</color>
+    <color name="sold_out">#acadae</color>
+    <color name="gray_skeleton">#dcdcdc</color>
+    <color name="green">#00c919</color>
+    <color name="green_color">#00c919</color>
+    <color name="masking">#22000000</color>
+</resources>

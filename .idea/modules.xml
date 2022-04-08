@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CTGapp.iml" filepath="$PROJECT_DIR$/.idea/modules/CTGapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/VinLibrary/CTGapp.VinLibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/VinLibrary/CTGapp.VinLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CTGapp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CTGapp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/image/CTGapp.image.iml" filepath="$PROJECT_DIR$/.idea/modules/image/CTGapp.image.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mp3record/CTGapp.mp3record.iml" filepath="$PROJECT_DIR$/.idea/modules/mp3record/CTGapp.mp3record.iml" />
+    </modules>
+  </component>
+</project>

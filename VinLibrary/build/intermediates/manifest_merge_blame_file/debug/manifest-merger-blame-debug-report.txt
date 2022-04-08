@@ -1,0 +1,49 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ocrgroup.vinlibrary" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="15"
+6-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="28" />
+7-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.VIBRATE" />
+9-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:5:5-66
+9-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:5:22-63
+10
+11    <application>
+11-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:7:5-24:19
+12        <activity
+12-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:8:9-11:69
+13            android:name="com.ocrgroup.activity.VinCropActivity"
+13-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:9:13-65
+14            android:screenOrientation="portrait"
+14-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:10:13-49
+15            android:theme="@android:style/Theme.Light.NoTitleBar" />
+15-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:11:13-66
+16        <activity
+16-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:12:9-15:69
+17            android:name="com.ocrgroup.activity.VinScanActivity"
+17-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:13:13-65
+18            android:screenOrientation="portrait"
+18-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:14:13-49
+19            android:theme="@android:style/Theme.Light.NoTitleBar" />
+19-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:15:13-66
+20        <activity
+20-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:16:9-18:52
+21            android:name="com.ocrgroup.activity.VinRecogActivity"
+21-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:17:13-66
+22            android:screenOrientation="portrait" />
+22-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:18:13-49
+23        <activity
+23-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:20:9-23:66
+24            android:name="com.ocrgroup.activity.VinCameraActivity"
+24-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:21:13-67
+25            android:screenOrientation="portrait"
+25-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:22:13-49
+26            android:theme="@style/Theme.AppCompat.NoActionBar" />
+26-->C:\Users\YL\AndroidStudioProjects\DingDingRepairShop\VinLibrary\src\main\AndroidManifest.xml:23:13-63
+27    </application>
+28
+29</manifest>

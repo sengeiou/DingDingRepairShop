@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page"
+    android:orientation="vertical"
+    tools:context=".activity.mine.whitebar.CreditExtensionActivity">
+
+    <com.android.ctgapp.widget.CustomTitleBar
+        android:id="@+id/mTitleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mTitle="白条" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/mTopTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="18dp"
+            android:text="待还款总额(元)"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/mWaitPayTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mTopTV"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"
+            android:text="2,315.00"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+
+        <ImageView
+            android:id="@+id/mDealFlowIV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/icon_white_bar_right" />
+
+    </RelativeLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

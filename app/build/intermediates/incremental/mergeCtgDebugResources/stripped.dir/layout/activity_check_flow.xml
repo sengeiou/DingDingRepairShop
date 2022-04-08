@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mDrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page"
+    tools:context=".activity.mine.whitebar.CheckFlowActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="40dp">
+
+            <ImageView
+                android:id="@+id/mBackIv"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="@string/app_name"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="10dp"
+                android:src="@drawable/icon_back_black" />
+
+            <RelativeLayout
+                android:id="@+id/mSearchRL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.android.ctgapp.widget.EditTextWithDeleteBtn
+                    android:id="@+id/mSearchET"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/bg_edit_gray_circle"
+                    android:hint="供应商名称/订单编号"
+                    android:imeOptions="actionSearch"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="3dp"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/icon_epc_search" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/mDrawerIV"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingHorizontal="12dp"
+                android:src="@drawable/icon_screen_other" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/mTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/colorAccent"
+            app:tabRippleColor="@null"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextAppearance="@style/MyTabText">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付宝" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="白条" />
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                -->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="钱包" />-->
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="储值卡" />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="代金券" />
+        </com.google.android.material.tabs.TabLayout>
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/mRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/mCompanyCountTV">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mCheckFlowRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <!--抽屉-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="12dp"
+            android:text="是否开票"
+            android:textColor="@color/black_text" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mInvoice1"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_border_acc_circle"
+                android:gravity="center"
+                android:text="全部"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mInvoice2"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_gray_circle"
+                android:gravity="center"
+                android:text="开票"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mInvoice3"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_gray_circle"
+                android:gravity="center"
+                android:text="不开票"
+                android:textSize="12sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingVertical="12dp"
+            android:text="交易方式"
+            android:textColor="@color/black_text" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mPayWay1"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_border_acc_circle"
+                android:gravity="center"
+                android:text="全部"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mPayWay2"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_gray_circle"
+                android:gravity="center"
+                android:text="白条"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mPayWay3"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_gray_circle"
+                android:gravity="center"
+                android:text="微信"
+                android:textSize="12sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:id="@+id/mPayWay4"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_gray_circle"
+                android:gravity="center"
+                android:text="支付宝"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mPayWay7"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_gray_circle"
+                android:gravity="center"
+                android:text="储值卡"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mPayWay8"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_gray_circle"
+                android:gravity="center"
+                android:text="代金券"
+                android:textSize="12sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingVertical="12dp"
+            android:text="交易类型"
+            android:textColor="@color/black_text" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mDealType1"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_border_acc_circle"
+                android:gravity="center"
+                android:text="全部"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mDealType2"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_gray_circle"
+                android:gravity="center"
+                android:text="采购订单"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/mDealType3"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_gray_circle"
+                android:gravity="center"
+                android:text="采购退货单"
+                android:textSize="12sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <View
+            style="@style/GrayLine"
+            android:layout_marginBottom="12dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/mResetBTN"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_border_gray_circle"
+                android:text="重置" />
+
+            <Button
+                android:id="@+id/mConfirmBTN"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_common"
+                android:text="确定"
+                android:textColor="@color/white" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.drawerlayout.widget.DrawerLayout>

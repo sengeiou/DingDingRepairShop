@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_page">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_banner_bg"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/mBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="176dp" />
+                </androidx.cardview.widget.CardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="-20dp"
+                app:cardCornerRadius="6dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/mTabLayout"
+                        android:layout_marginHorizontal="60dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        app:tabIndicatorColor="@color/colorAccent"
+                        app:tabRippleColor="@null"
+                        app:tabIndicatorFullWidth="false"
+                        app:tabSelectedTextColor="@color/colorAccent"
+                        app:tabTextAppearance="@style/MyTabText">
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="VIN" />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="商品" />
+                    </com.google.android.material.tabs.TabLayout>
+                    <View style="@style/GrayLine"/>
+                    <!--商品搜索-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:orientation="vertical"
+                        android:id="@+id/mGoodsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/mBanner"
+                            android:layout_marginTop="8dp"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="10dp">
+
+                            <com.android.ctgapp.widget.EditTextWithDeleteBtn
+                                android:id="@+id/mGoodsSearchET"
+                                android:layout_width="match_parent"
+                                android:layout_height="34dp"
+                                android:background="@drawable/bg_edit_text_common"
+                                android:hint="请输入要搜索的商品"
+                                android:imeOptions="actionSearch"
+                                android:importantForAutofill="no"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="17"
+                                android:paddingVertical="5dp"
+                                android:paddingStart="20dp"
+                                android:paddingEnd="10dp"
+                                android:textSize="12sp" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:visibility="invisible"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text="已输入"
+                                android:textColor="@color/gray_text"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="/17位"
+                                android:textColor="@color/gray_text"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="20dp"
+                                    android:paddingEnd="4dp"
+                                    android:paddingBottom="10dp"
+                                    android:text="最近用过"
+                                    android:textColor="@color/gray_text"
+                                    android:textSize="12sp" />
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:src="@drawable/icon_arrow_right_gray" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <!--Vin码搜索-->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/mVinContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/mBanner"
+                            android:layout_marginTop="8dp"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="10dp">
+
+                            <EditText
+                                android:id="@+id/mVINSearchET"
+                                android:layout_width="match_parent"
+                                android:layout_height="34dp"
+                                android:background="@drawable/bg_edit_text_common"
+                                android:hint="@string/_17_vin"
+                                android:imeOptions="actionSearch"
+                                android:importantForAutofill="no"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="17"
+                                android:paddingVertical="5dp"
+                                android:paddingStart="20dp"
+                                android:paddingEnd="10dp"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/mScanVIN"
+                                android:layout_width="40dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@string/app_name"
+                                android:paddingHorizontal="4dp"
+                                android:paddingVertical="4dp"
+                                android:src="@drawable/icon_scan_blue" />
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text="已输入"
+                                android:textColor="@color/gray_text"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/mInputCountTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="/17位"
+                                android:textColor="@color/gray_text"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/mSearchHistoryLL"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="20dp"
+                                    android:paddingEnd="4dp"
+                                    android:paddingBottom="10dp"
+                                    android:text="最近用过"
+                                    android:textColor="@color/gray_text"
+                                    android:textSize="12sp" />
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:src="@drawable/icon_arrow_right_gray" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:id="@+id/mNoticeLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/shandian" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/notify"
+                    android:textColor="@color/black_text"
+                    android:textSize="14sp" />
+
+                <com.android.ctgapp.widget.NotifyTextView
+                    android:id="@+id/mBulletinView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:bulletinEnterAnim="@anim/bulletin_item_enter"
+                    app:bulletinInterval="3000"
+                    app:bulletinLeaveAnim="@anim/bulletin_item_leave" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="9dp"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/mViewVertical"
+                            android:layout_width="2dp"
+                            android:layout_height="12.5dp"
+                            android:background="@color/colorAccent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="@string/quick_wear_part"
+                            android:textColor="#444"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/mTireIV"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/click_bg"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_tire" />
+
+                        <ImageView
+                            android:id="@+id/mBrakePadIV"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/click_bg"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_brake_pad" />
+
+                        <ImageView
+                            android:id="@+id/mIgnitionIV"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/click_bg"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_shock_absorber" />
+
+                        <ImageView
+                            android:id="@+id/mBatteryIV"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/click_bg"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_battery" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/tire"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/brake_pad"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/sparking_plug"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/accumulator"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/mOilIV"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/click_bg"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_oils" />
+
+                        <ImageView
+                            android:id="@+id/mFilterIV"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/click_bg"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_filter" />
+
+                        <ImageView
+                            android:id="@+id/mLightIV"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/click_bg"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_light_syetem" />
+
+                        <ImageView
+                            android:id="@+id/mMoreIV"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/click_bg"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_home_more" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/oil_and_chemicals"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/filter"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="照明系统"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/more"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/mBrandTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="品牌"
+                android:textColor="@color/black_text" />
+
+            <com.android.ctgapp.common.CommonRecyclerView
+                android:id="@+id/mBrandRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/bg_solid_whit_radius5dp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:id="@+id/mHotGoodsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/hot_recommend"
+                android:textColor="@color/black_text"
+                android:visibility="gone" />
+
+            <com.android.ctgapp.common.CommonRecyclerView
+                android:id="@+id/mHotGoodsRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/bg_solid_whit_radius5dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.android.ctgapp.widget.VinKeyboardView
+        android:id="@+id/mVinKeyboardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#d1d5db"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyBackground="@drawable/selector_key_background"
+        android:keyPreviewHeight="43dp"
+        android:keyPreviewLayout="@layout/key_preview_layout"
+        android:keyTextColor="#333333"
+        android:keyTextSize="16sp"
+        android:paddingStart="0dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="5dp"
+        android:shadowColor="#00000000"
+        android:shadowRadius="0.0"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/mTrolleyIV"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_solid_gray_circle"
+        android:contentDescription="@string/app_name"
+        android:padding="12dp"
+        android:src="@drawable/icon_trolly_new" />
+</RelativeLayout>

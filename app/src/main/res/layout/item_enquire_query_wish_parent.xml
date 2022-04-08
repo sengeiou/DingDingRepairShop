@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mParentLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_marginBottom="1dp"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:id="@+id/mStatueTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="待处理" />
+        <View
+            android:id="@+id/mView"
+            android:layout_centerVertical="true"
+            android:layout_width="3dp"
+            android:layout_height="12dp"
+            android:background="@drawable/bg_btn_common"/>
+
+
+        <TextView
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@id/mView"
+            android:id="@+id/mTimeTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/mStatueTV"
+            android:text="20220-11-12" />
+
+    </RelativeLayout>
+
+    <View style="@style/GrayLine" />
+
+    <TextView
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:id="@+id/mPartNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:text="零件名称:"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/mCountTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总数量:"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/mAllMoneyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="0dp"
+        android:text="总价格:"
+        android:textSize="12sp" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ctgoe.app.dingding"
+    android:versionCode="13"
+    android:versionName="1.0.13" >
+
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="29" />
+    <!-- package="$applicationId"> -->
+    <!-- 解锁屏幕需要的权限 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" /> <!-- 申请电源锁需要的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读取通讯录 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <queries>
+        <package android:name="com.tencent.mm" />
+    </queries>
+
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" /> <!-- Required -->
+    <permission
+        android:name="com.ctgoe.app.dingding.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" /> <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.ctgoe.app.dingding.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> <!-- 华为角标 -->
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> <!-- Android Q后台定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <application
+        android:name="com.android.ctgapp.base.BaseApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="false"
+        android:icon="@drawable/logo_app"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.android.ctgapp.activity.home.shop.SearchGoodsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.money.RechargeMoneyHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.money.MoneyPackageRechargeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.money.MyMoneyPackageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.team.InviteUserToTeamActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.android.ctgapp.activity.message.chart.CurrentGroupChartActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.company.ClientManagerSetActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.android.ctgapp.activity.deal.QueryRecordV2Activity"
+            android:exported="true" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.ShouXinCompanyctivity"
+            android:exported="true" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.CarConfigDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.android.ctgapp.WXEntryActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.JumpToGzhDialogActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/DialogTheme" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.alliance.AllianceChildCompanyActivity"
+            android:exported="true" />
+        <activity android:name="com.android.ctgapp.activity.home.enquiry.VinSearchHistoryActivity" />
+        <activity android:name="com.android.ctgapp.activity.deal.enquire.EnquireWishDetailActivity" />
+        <activity android:name="com.android.ctgapp.activity.deal.enquire.EnquireWishListActivity" />
+        <activity
+            android:name="com.android.ctgapp.activity.other.SystemNoticeDialogActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/DialogTheme" />
+        <activity
+            android:name="com.android.ctgapp.activity.message.SystemNoticeActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="com.android.ctgapp.activity.deal.EnquireOrderConfirmActivity" />
+        <activity android:name="com.android.ctgapp.activity.deal.EnquireWaitDetailActivity" />
+        <activity android:name="com.android.ctgapp.activity.other.GuidePageActivity" />
+        <activity android:name="com.android.ctgapp.activity.deal.CommonPaySuccessActivity" />
+        <activity android:name="com.android.ctgapp.activity.mine.whitebar.PrepaymentChildActivity" />
+        <activity android:name="com.android.ctgapp.activity.mine.whitebar.PrepaymentActivity" />
+        <activity android:name="com.android.ctgapp.activity.home.shop.WhiteBarReturnActivity" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.whitebar.CreditExtensionActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.whitebar.WhiteBarDetailChildActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.whitebar.WhiteBarDealDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.whitebar.WhiteBarDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.whitebar.CheckFlowActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.whitebar.WhiteBarV2Activity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.ctgoe.app.wl.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.ctgoe.app.dingding.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.ctgoe.app.dingding.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.ctgoe.app.lanjing.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.enquiry.EpcPartDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.enquiry.EpcDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.enquiry.EPCActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.deal.QueryRecordDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.enquiry.BatchAddPartSelectMoreActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.deal.QueryRecordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.enquiry.AddPartActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.enquiry.BatchAddPartActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.enquiry.EnquiryCommonSelectActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.enquiry.EnquiryActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.alliance.AllianceDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.setting.AboutAppActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.login.UserAgreementActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.client.AuthInviteActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.company.CompanyAttestationActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.company.CompanyIntroActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.message.chart.card.CardShareRecentChartActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.message.chart.card.DingDingContactShareActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.message.chart.PersonInfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.company.CompanyInfoSettingActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.friend.FriendCompanyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.team.ManagementTeamActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.team.ManagementTeamMenuActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.message.chart.ChartOrderActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.message.chart.TakePhotoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.message.chart.CurrentChartActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.VisitorActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.team.ApplyNotifyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.ShareAppActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.whitebar.WhiteBarActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.ALLCouponsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.alliance.AllianceCanJoinActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.alliance.JoinAllianceActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.balance.BalanceTopUpActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.balance.BalanceSelectActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.alliance.CreateAllianceActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.alliance.MyAllianceActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.balance.CompanyBalanceActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.login.CreateOrJoinCompanyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.login.RegisterActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.company.JoinCompanyByCodeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.setting.PersonalAuthenticationActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.other.SplashPageActivity"
+            android:theme="@style/AppTheme.StartingWindowTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.ctgapp.activity.deal.ReturnGoodsDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.adapter.chart.ChartOrderDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.shop.CouponActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.deal.AfterSaleActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.address.AddressListActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.deal.LaunchAfterSaleActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.shop.PayResultActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.deal.OrderDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.shop.OrderConfirmSingleActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.address.AddressEditActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.shop.CheckoutActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.shop.TrolleyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.shop.VulnerablePartShopActivity"
+            android:launchMode="singleTop" />
+        <activity android:name="com.android.ctgapp.activity.home.VinSearchActivity" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.shop.OrderConfirmActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.shop.GoodsDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.home.shop.PartShopActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.company.CompanyContactSelectActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.client.AddClientActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.client.ClientManagementActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.team.DepartmentSelectActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.team.SelectPositionActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.team.ApplyNotificationActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.friend.PhoneContactActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.friend.AddSelectGroupActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.friend.AddBusinessFriendActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.friend.CustomGroupSettingActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.money.RechargeCommitActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.friend.BusinessFriendActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.team.AddOrEditMemberActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.team.MyTeamActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.PersonInfoChangeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.setting.ChangePasswordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.setting.SettingActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.mine.company.CompanyDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.login.ForgetPasswordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.login.LoginActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.android.ctgapp.activity.company.JoinCompanyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.company.CreateCompanyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.company.SwitchCompanyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.android.ctgapp.activity.MainActivity"
+            android:launchMode="singleTask" />
+        <!--
+         android:process=":remote"
+          android:process=":pushcore"
+        -->
+        <service
+            android:name="com.android.ctgapp.service.AppService"
+            android:enabled="true"
+            android:exported="false" /> <!-- android:authorities="com.android.ctgapp.fileProvider" -->
+        <service
+            android:name="com.android.ctgapp.service.JpushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore" >
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.android.ctgapp.receiver.JPushReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="$applicationId" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.android.ctgapp.boradcast.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.ctgoe.app.dingding" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.android.ctgapp.util.FileProvider"
+            android:authorities="com.android.ctgapp.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- bugly -->
+        <!-- 配置APP ID -->
+        <!-- <meta-data -->
+        <!-- android:name="BUGLY_APPID" -->
+        <!-- android:value="f7810dd409" /> &lt;!&ndash; 配置APP渠道号 &ndash;&gt; -->
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="61d0cf3092" /> <!-- 配置APP渠道号 -->
+        <meta-data
+            android:name="BUGLY_APP_CHANNEL"
+            android:value="com.android.ctgapp.fileProvider" /> <!-- 配置Bugly调试模式（true或者false） -->
+        <meta-data
+            android:name="BUGLY_ENABLE_DEBUG"
+            android:value="true" /> <!-- 配置APP版本号 -->
+        <meta-data
+            android:name="BUGLY_APP_VERSION"
+            android:value="1.0.0" />
+
+        <activity
+            android:name="com.glance.guolindev.ui.db.DBActivity"
+            android:icon="@mipmap/glance_library_ic_launcher"
+            android:label="@string/glance_library_glance"
+            android:roundIcon="@mipmap/glance_library_ic_launcher_round"
+            android:taskAffinity="com.glance.guolindev.com.ctgoe.app.dingding"
+            android:theme="@style/GlanceLibraryActivityTheme" />
+
+        <activity-alias
+            android:name="com.glance.guolindev.ui.db.DBActivityLauncher"
+            android:icon="@mipmap/glance_library_ic_launcher"
+            android:label="@string/glance_library_glance"
+            android:targetActivity="com.glance.guolindev.ui.db.DBActivity"
+            android:taskAffinity="com.glance.guolindev.com.ctgoe.app.dingding" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:name="com.glance.guolindev.ui.table.TableActivity"
+            android:exported="false"
+            android:theme="@style/GlanceLibraryActivityTheme" />
+        <activity
+            android:name="com.glance.guolindev.ui.data.DataActivity"
+            android:exported="false"
+            android:theme="@style/GlanceLibraryActivityTheme" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.ctgoe.app.dingding.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="com.glance.guolindev.initializer.GlanceInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <service
+            android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"
+            android:enabled="false"
+            android:process=":leakcanary" />
+        <service
+            android:name="com.squareup.leakcanary.DisplayLeakService"
+            android:enabled="false"
+            android:process=":leakcanary" />
+
+        <provider
+            android:name="com.squareup.leakcanary.internal.LeakCanaryFileProvider"
+            android:authorities="com.squareup.leakcanary.fileprovider.com.ctgoe.app.dingding"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/leak_canary_file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.squareup.leakcanary.internal.DisplayLeakActivity"
+            android:enabled="false"
+            android:icon="@mipmap/leak_canary_icon"
+            android:label="@string/leak_canary_display_activity_label"
+            android:process=":leakcanary"
+            android:taskAffinity="com.squareup.leakcanary.com.ctgoe.app.dingding"
+            android:theme="@style/leak_canary_LeakCanary.Base" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.squareup.leakcanary.internal.RequestStoragePermissionActivity"
+            android:enabled="false"
+            android:excludeFromRecents="true"
+            android:icon="@mipmap/leak_canary_icon"
+            android:label="@string/leak_canary_storage_permission_activity_label"
+            android:process=":leakcanary"
+            android:roundIcon="@mipmap/leak_canary_icon"
+            android:taskAffinity="com.squareup.leakcanary.com.ctgoe.app.dingding"
+            android:theme="@style/leak_canary_Theme.Transparent" />
+        <activity
+            android:name="com.blankj.utilcode.util.Utils$TransActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:multiprocess="true"
+            android:theme="@style/ActivityTranslucent"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <provider
+            android:name="com.blankj.utilcode.util.Utils$FileProvider4UtilCode"
+            android:authorities="com.ctgoe.app.dingding.utilcode.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            android:multiprocess="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/util_code_provider_paths" />
+        </provider>
+
+        <service android:name="com.blankj.utilcode.util.MessengerUtils$ServerService" >
+            <intent-filter>
+                <action android:name="com.ctgoe.app.dingding.messenger" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.activity.AudioPlayActivity"
+            android:theme="@style/MyDialogStyle" />
+        <activity
+            android:name="com.ocrgroup.activity.VinCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="com.ocrgroup.activity.VinScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="com.ocrgroup.activity.VinRecogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ocrgroup.activity.VinCameraActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="me.minetsh.imaging.IMGGalleryActivity"
+            android:theme="@style/ImageGalleryTheme" />
+        <activity
+            android:name="me.minetsh.imaging.IMGEditActivity"
+            android:theme="@style/ImageEditTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <provider
+            android:name="com.xuexiang.xui.XUIInitProvider"
+            android:authorities="com.ctgoe.app.dingding.xui-init-provider"
+            android:exported="false"
+            android:multiprocess="true" />
+
+        <activity
+            android:name="com.xuexiang.xui.widget.imageview.preview.ui.PreviewActivity"
+            android:theme="@style/XUITheme.Translucent" />
+        <activity
+            android:name="com.xuexiang.xui.widget.imageview.preview.ui.VideoPlayerActivity"
+            android:theme="@style/XUITheme.Translucent" />
+        <activity android:name="com.zhihu.matisse.ui.MatisseActivity" />
+        <activity android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity" />
+        <activity android:name="com.zhihu.matisse.internal.ui.SelectedPreviewActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.PayResultActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.AlipayResultActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5OpenAuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <provider
+            android:name="com.lwkandroid.imagepicker.utils.IPCacheProvider"
+            android:authorities="com.ctgoe.app.dingding_c.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/ip_cache_path" />
+        </provider>
+        <provider
+            android:name="com.lwkandroid.imagepicker.utils.IPExCacheProvider"
+            android:authorities="com.ctgoe.app.dingding_ex_c.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/ip_external_cache_path" />
+        </provider>
+        <provider
+            android:name="com.lwkandroid.imagepicker.utils.IPExFilesProvider"
+            android:authorities="com.ctgoe.app.dingding_ex_f.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/ip_external_files_path" />
+        </provider>
+        <provider
+            android:name="com.lwkandroid.imagepicker.utils.IPExProvider"
+            android:authorities="com.ctgoe.app.dingding_ex.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/ip_external_path" />
+        </provider>
+        <provider
+            android:name="com.lwkandroid.imagepicker.utils.IPFilesProvider"
+            android:authorities="com.ctgoe.app.dingding_f.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/ip_files_path" />
+        </provider>
+
+        <activity
+            android:name="com.lwkandroid.imagepicker.ui.grid.view.ImageDataActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.lwkandroid.imagepicker.ui.pager.view.ImagePagerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.lwkandroid.imagepicker.ui.crop.ImageCropActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.yzq.zxinglibrary.android.CaptureActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" /> <!-- Rich push 核心功能 since 2.0.6 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="true"
+            android:theme="@style/MyDialogStyle" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="cn.jpush.android.ui.PopWinActivity" />
+
+                <category android:name="com.ctgoe.app.dingding" />
+            </intent-filter>
+        </activity> <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ctgoe.app.dingding" />
+            </intent-filter>
+        </activity> <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service> <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，或把 enabled 设置成 false ；App 不会被其他 App 拉起，但会拉起其他的 App。 -->
+        <!-- jcore2.4.2 App的被拉起不依赖于该组件 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.ctgoe.app.dingding" />
+            </intent-filter>
+        </service> <!-- 可选，如果使用静态Activity方式拉起，该组件必须声明 -->
+        <activity
+            android:name="cn.jpush.android.service.DActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:taskAffinity="jpush.custom"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DActivity" />
+
+                <category android:name="com.ctgoe.app.dingding" />
+            </intent-filter>
+        </activity> <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.ctgoe.app.dingding" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver> <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" /> <!-- since 3.5.0 Required SDK 核心功能 -->
+        <!-- 3.5.0新增，用于定时展示功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.SchedulerReceiver"
+            android:exported="false" /> <!-- since 3.0.9 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.ctgoe.app.dingding.DataProvider"
+            android:exported="false"
+            android:process=":pushcore" /> <!-- since 3.1.0 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.ctgoe.app.dingding.DownloadProvider"
+            android:exported="true" /> <!-- since 3.3.0 Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.service.JNotifyActivity"
+            android:exported="true"
+            android:taskAffinity="jpush.custom"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.JNotifyActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ctgoe.app.dingding" />
+            </intent-filter>
+        </activity> <!-- since 3.5.6 新增华硕通道 -->
+        <receiver android:name="cn.jpush.android.asus.AsusPushMessageReceiver" /> <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="90be10cec0f6070dc00f7f87" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.ctgoe.app.dingding.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

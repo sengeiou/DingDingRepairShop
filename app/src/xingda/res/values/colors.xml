@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--星达-->
+    <color name="colorPrimary">#C5312D</color>
+    <color name="colorPrimaryDark">#C5312D</color>
+    <color name="colorAccent">#C5312D</color>
+    <color name="colorAccentLight">#F4D7D9</color>
+    <color name="gradualChangeStart">#FF8888</color>
+    <color name="colorAccentDark">#993333</color>
+<!--    <color name="addTrolley">#FF8888</color>-->
+
+</resources>

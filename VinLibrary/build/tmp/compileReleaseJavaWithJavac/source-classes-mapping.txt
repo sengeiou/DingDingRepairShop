@@ -1,0 +1,52 @@
+com/ocrgroup/utils/DetectStateUtil.java
+ com.ocrgroup.utils.DetectStateUtil
+com/ocrgroup/view/TouchImageView.java
+ com.ocrgroup.view.TouchImageView
+com/ocrgroup/vin/VINAPI.java
+ com.ocrgroup.vin.VINAPI
+com/ocrgroup/utils/StreamUtil.java
+ com.ocrgroup.utils.StreamUtil
+com/ocrgroup/utils/VinOcrUtils.java
+ com.ocrgroup.utils.VinOcrUtils
+com/ocrgroup/model/VinKeyDatas.java
+ com.ocrgroup.model.VinKeyDatas
+com/ocrgroup/activity/VinScanActivity.java
+ com.ocrgroup.activity.VinScanActivity
+ com.ocrgroup.activity.VinScanActivity$1
+ com.ocrgroup.activity.VinScanActivity$2
+ com.ocrgroup.activity.VinScanActivity$2$1
+ com.ocrgroup.activity.VinScanActivity$3
+ com.ocrgroup.activity.VinScanActivity$4
+com/ocrgroup/vinlibrary/BuildConfig.java
+ com.ocrgroup.vinlibrary.BuildConfig
+com/ocrgroup/activity/VinRecogActivity.java
+ com.ocrgroup.activity.VinRecogActivity
+ com.ocrgroup.activity.VinRecogActivity$1
+ com.ocrgroup.activity.VinRecogActivity$1$1
+com/ocrgroup/model/LicInfo.java
+ com.ocrgroup.model.LicInfo
+com/ocrgroup/utils/ToastUtil.java
+ com.ocrgroup.utils.ToastUtil
+com/ocrgroup/utils/NV21ToARGBUtil.java
+ com.ocrgroup.utils.NV21ToARGBUtil
+com/ocrgroup/activity/VinCameraActivity.java
+ com.ocrgroup.activity.VinCameraActivity
+ com.ocrgroup.activity.VinCameraActivity$1
+ com.ocrgroup.activity.VinCameraActivity$2
+ com.ocrgroup.activity.VinCameraActivity$2$1
+ com.ocrgroup.activity.VinCameraActivity$2$1$1
+com/ocrgroup/activity/VinCropActivity.java
+ com.ocrgroup.activity.VinCropActivity
+com/ocrgroup/utils/PhotoFromPhotoAlbum.java
+ com.ocrgroup.utils.PhotoFromPhotoAlbum
+com/ocrgroup/utils/StatusBarUtil.java
+ com.ocrgroup.utils.StatusBarUtil
+ com.ocrgroup.utils.StatusBarUtil$1
+com/ocrgroup/utils/VinConfig.java
+ com.ocrgroup.utils.VinConfig
+com/ocrgroup/view/OcrProgressDialog.java
+ com.ocrgroup.view.OcrProgressDialog
+com/ocrgroup/utils/SDKMessageUtil.java
+ com.ocrgroup.utils.SDKMessageUtil
+com/ocrgroup/view/VinScanRectView.java
+ com.ocrgroup.view.VinScanRectView

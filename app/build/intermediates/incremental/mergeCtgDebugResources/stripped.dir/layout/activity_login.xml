@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.login.LoginActivity">
+
+    <TextView
+        android:id="@+id/mRegisterTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="40dp"
+        android:padding="20dp"
+        android:text="账号注册" />
+
+    <TextView
+        android:id="@+id/mLoginByCodeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/auth_code_login"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/mLoginByPasswordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/password_login"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:visibility="gone" />
+
+    <com.android.ctgapp.widget.EditTextWithDeleteBtn
+        android:id="@+id/mPhoneNumberET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@null"
+        android:hint="@string/please_input_account_phone"
+        android:inputType="phone"
+        android:maxLength="11" />
+
+    <View
+        style="@style/GrayLine"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/mPasswordRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+
+        <EditText
+            android:id="@+id/mPasswordET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="20dp"
+            android:background="@null"
+            android:hint="@string/please_input_password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:maxLength="20" />
+
+        <EditText
+            android:id="@+id/mPasswordShowET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="20dp"
+            android:background="@null"
+            android:hint="@string/please_input_password"
+            android:importantForAutofill="no"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/mShowPasswordIV"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:paddingHorizontal="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_eye_close" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mAuthCodeLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/mAuthCodeET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/please_input_auth_code"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="10" />
+
+        <TextView
+            android:id="@+id/mAuthCodeCountDownTV"
+            android:layout_width="120dp"
+            android:layout_height="24dp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:lines="1"
+            android:paddingStart="0dp"
+            android:paddingEnd="20dp"
+            android:text="@string/get_auth_code"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+
+    <View
+        style="@style/GrayLine"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/mChangeLoginTypeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_password" />
+
+        <TextView
+            android:id="@+id/mForgetPasswordTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/forget_password"
+            android:visibility="gone"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/mLoginBTN"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_btn_common"
+        android:text="@string/login_"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/mUserAgreementLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/mCheckBox"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:scaleX="0.5"
+            android:scaleY="0.5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-8dp"
+            android:text="@string/read_and_agree"
+            android:textColor="#D0D0D0"
+            android:textSize="11sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/mUserAgreementTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:text="@string/user_deal"
+            android:textColor="@color/colorAccent"
+            android:textSize="11sp"
+            tools:ignore="SmallSp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/mXia"
+        style="@style/CommonButton"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="测试账号"
+        android:visibility="gone" />
+
+</LinearLayout>

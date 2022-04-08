@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_page"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mItemRL"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mHeaderIV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/defaulthead" />
+
+        <TextView
+            android:id="@+id/mUserNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/black_text"
+            android:layout_toEndOf="@id/mHeaderIV"
+            android:text="@string/app_name" />
+
+        <TextView
+            android:textSize="13sp"
+            android:textColor="#777777"
+            android:id="@+id/mCompanyNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/mUserNameTV"
+            android:layout_toEndOf="@id/mHeaderIV"
+            android:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/mInvitationRegisterTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="20dp"
+            android:text="邀请注册"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+
+    <View style="@style/GrayLine" />
+</LinearLayout>
